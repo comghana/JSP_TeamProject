@@ -14,6 +14,8 @@
 		left: 178px;
 		width: 280px;
 		height: 20px;
+		font-weight: bold;
+
 	}
 	.background{
 		background-color: #042759;
