@@ -38,6 +38,13 @@
 		height: 20px;
 		width: 20px;
 	}
+	.arrv_dep_font{
+		color: white;
+		font-size: 16px;
+		position: absolute;
+		width: 156px;
+		height: 20px;
+	}
 
 </style>
 </head>
@@ -50,6 +57,12 @@
 	<div class="whereWego">
 		어디로 여행갈까요?
 	</div>
+
+	<p class="arrv_dep_font" style ="top:301px; left:154px" >출발</p>
+	<p class="arrv_dep_font" style ="top:301px; left:421px" >도착</p>
+	<p class="arrv_dep_font" style ="top:301px; left:651px" >가는날</p>
+	<p class="arrv_dep_font" style ="top:301px; left:761px" >오는날</p>
+	<p class="arrv_dep_font" style ="top:301px; left:878px" >최소 시간</p>
 	<form action="" method="post">
 		<p class="radio">
 		<input class="radioSize" type="radio" name="radioOp" value="round" checked> 왕복
@@ -57,5 +70,6 @@
 		<input class="radioSize" type="radio" name="radioOp" value="flightnv"> 운행편명
 		</p>
 	</form>
+	
 </body>
 </html>
