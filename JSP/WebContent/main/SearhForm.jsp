@@ -42,6 +42,7 @@
 	.selectbox{
 		position: absolute;
 		color: #5E5E5E;
+ 	}
 =======
 	.arrv_dep_font{
 		color: white;
