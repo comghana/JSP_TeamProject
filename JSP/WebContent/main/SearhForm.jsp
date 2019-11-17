@@ -38,6 +38,10 @@
 		height: 20px;
 		width: 20px;
 	}
+	.selectbox{
+		position: absolute;
+		color: #5E5E5E;
+	}
 
 </style>
 </head>
@@ -56,6 +60,10 @@
 		<input class="radioSize" type="radio" name="radioOp" value="oneway"> 편도
 		<input class="radioSize" type="radio" name="radioOp" value="flightnv"> 운행편명
 		</p>
+		<div>
+		<input class="selectbox" ="text" name="departure" style="width: 223px; height: 40px; top: 329px; left: 152px">
+		<input class="selectbox" type="text" name="arrive"  style="width: 223px; height: 40px; top: 329px; left: 421px">
+		</div>
 	</form>
 </body>
 </html>
