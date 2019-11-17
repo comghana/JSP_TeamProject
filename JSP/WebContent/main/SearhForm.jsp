@@ -38,19 +38,21 @@
 		height: 20px;
 		width: 20px;
 	}
-<<<<<<< HEAD
+
 	.selectbox{
 		position: absolute;
 		color: #5E5E5E;
+		width: 223px;
+		height: 35px;
  	}
-=======
+
 	.arrv_dep_font{
 		color: white;
 		font-size: 16px;
 		position: absolute;
 		width: 156px;
 		height: 20px;
->>>>>>> text
+		font-weight: bold;
 	}
 
 </style>
@@ -76,9 +78,9 @@
 		<input class="radioSize" type="radio" name="radioOp" value="oneway"> 편도
 		<input class="radioSize" type="radio" name="radioOp" value="flightnv"> 운행편명
 		</p>
-		<div>
-		<input class="selectbox" type="text" name="departure" style="width: 223px; height: 40px; top: 329px; left: 152px">
-		<input class="selectbox" type="text" name="arrive"  style="width: 223px; height: 40px; top: 329px; left: 421px">
+		<div style="position: ab">
+		<input class="selectbox" type="text" name="departure" style="top: 342px; left: 152px">
+		<input class="selectbox" type="text" name="arrive"  style="top: 342px; left: 421px">
 		</div>
 	</form>
 	
