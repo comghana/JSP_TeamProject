@@ -56,6 +56,7 @@
 		<input class="radioSize" type="radio" name="radioOp" value="oneway"> 편도
 		<input class="radioSize" type="radio" name="radioOp" value="flightnv"> 운행편명
 		</p>
+		<input type="submit" style="position: absolute; color: white; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px;border-radius: 6px; top: 405px; left: 893.5px" value="항공권 조회 →">
 	</form>
 </body>
 </html>
