@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+
 	.radio{
 		font-size: 20px;
 		color: white;
@@ -42,7 +43,7 @@
 	.selectbox{
 		position: absolute;
 		color: #5E5E5E;
-		width: 223px;
+		width: 200px;
 		height: 35px;
  	}
 
@@ -68,8 +69,8 @@
 	</div>
 
 	<p class="arrv_dep_font" style ="top:301px; left:154px" >출발</p>
-	<p class="arrv_dep_font" style ="top:301px; left:421px" >도착</p>
-	<p class="arrv_dep_font" style ="top:301px; left:651px" >가는날</p>
+	<p class="arrv_dep_font" style ="top:301px; left:411px" >도착</p>
+	<p class="arrv_dep_font" style ="top:301px; left:628px" >가는날</p>
 	<p class="arrv_dep_font" style ="top:301px; left:761px" >오는날</p>
 	<p class="arrv_dep_font" style ="top:301px; left:878px" >최소 시간</p>
 	<form action="" method="post">
@@ -78,9 +79,12 @@
 		<input class="radioSize" type="radio" name="radioOp" value="oneway"> 편도
 		<input class="radioSize" type="radio" name="radioOp" value="flightnv"> 운행편명
 		</p>
-		<div style="position: ab">
+		<div>
 		<input class="selectbox" type="text" name="departure" style="top: 342px; left: 152px">
-		<input class="selectbox" type="text" name="arrive"  style="top: 342px; left: 421px">
+		<input class="selectbox" type="text" name="arrive"  style="top: 342px; left: 411px">
+		<input class="selectbox" type="date" name="depdate" style="top: 342px; left: 628px; width: 120px">
+		<input class="selectbox" type="date" name="arrvdate" style="top: 342px; left: 761px; width: 120px">
+		<input class="selectbox" type="time" name="minimumtime" style="top: 342px; left: 878px; width: 120px">
 		</div>
 	</form>
 	
