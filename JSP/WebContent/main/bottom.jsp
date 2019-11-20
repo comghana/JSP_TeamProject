@@ -3,7 +3,7 @@
 <link href="../css/all.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<div id="footer_nav">
+<div id="footer_nav" style="margin-top:300px;">
 	<ul>
 		<a href="sorry.html"><li>회사 소개</li></a>
 		<a href="sorry.html"><li>제휴</li></a>

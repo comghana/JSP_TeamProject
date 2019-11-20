@@ -4,6 +4,10 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
+<div style="margin-top:330px;">
+<b style="font-size: 30px;">
+	> 추천 여행지 
+</b>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
@@ -13,7 +17,7 @@
 	</ol>
 
 	<!-- Wrapper for slides -->
-	<div class="carousel-inner">
+	<div class="carousel-inner" style="left: 253px;">
 		<div class="item active">
 			<img src="../img/kota.jpg" alt="">
 		</div>
@@ -28,11 +32,12 @@
 	</div>
 
 	<!-- Left and right controls -->
-	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	<a class="left carousel-control" href="" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left"></span> <span
 		class="sr-only">Previous</span>
-	</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	</a> <a class="right carousel-control" href="" data-slide="next">
 		<span class="glyphicon glyphicon-chevron-right"></span> <span
 		class="sr-only">Next</span>
 	</a>
+</div>
 </div>

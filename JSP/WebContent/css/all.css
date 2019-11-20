@@ -9,7 +9,9 @@ header {width:1400px;}
   font-size:13px;
 }
 
-#header_nav li:hover, #header_nav li a:hover{color:#AAA;}
+#header_nav li:hover, #header_nav li a:hover {
+	color: #AAA;
+}
 
 header a img{
   width:150px;
@@ -33,6 +35,13 @@ header ul li{
   cursor:pointer;
 }
 
+
+#footer_nav {margin-left:10px;}
+
+footer p {text-align:center;}
+
+footer > span {margin-left:600px;}
+
 footer {
   clear:both;
   font-size:13px;
@@ -40,12 +49,6 @@ footer {
   position:relative;
   top:-50px;
 }
-
-#footer_nav {margin-left:10px;}
-
-footer p {text-align:center;}
-
-footer > span {margin-left:600px;}
 
 #index {
     width:780px;
