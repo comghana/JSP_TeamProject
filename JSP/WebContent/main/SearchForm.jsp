@@ -93,7 +93,7 @@ body {
 			type="radio" name="radioOp" value="flightnv"> 운행편명
 	</p>
 	<input type="submit"
-		style="position: absolute; color: white; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"
+		style="position: absolute; color: white; border:0; outline:0; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"
 		value="항공권 조회 →">
 		<input class="selectbox" type="text" name="departure"
 			style="top: 342px; left: 152px"> <input class="selectbox"
