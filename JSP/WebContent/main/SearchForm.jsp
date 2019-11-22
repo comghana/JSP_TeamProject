@@ -110,9 +110,18 @@ body {
 	<input class="selectbox" type="date" name="depdate"
 		style="top: 342px; left: 603px; width: 130px"> <input
 		class="selectbox" type="date" name="arrvdate"
-		style="top: 342px; left: 740px; width: 130px"> <input
-		class="selectbox" type="time" name="minimumtime"
+		style="top: 342px; left: 740px; width: 130px"> <select
+		class="selectbox" name="minimumtime"
 		style="top: 342px; left: 878px; width: 120px">
+		<%
+		for (int i = 1; i <= 24; i++) {
+		%>
+		<option value=<%=i%>>
+			<%=i%>시 00분</option>
+		<%
+			}
+		%>
+	</select>
 </form>
 <script>
 	// 출발지 목적지 스왑 버튼

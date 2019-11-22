@@ -3,8 +3,7 @@
 <link href="../css/all.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-
+	
 <style>
 .pic_name {
 	font-size: 20px;
