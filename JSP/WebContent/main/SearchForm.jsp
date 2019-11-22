@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style>
 .background {
 	background-color: #042759;
@@ -90,12 +90,13 @@ body {
 <p class="arrv_dep_font" style="top: 310px; left: 878px">최소 시간</p>
 <form action="" method="post">
 	<p class="radio">
-		<input class="radioSize" type="radio" name="radioOp" value="round"
-			checked> 왕복 &nbsp &nbsp <input class="radioSize" type="radio"
+		<input id="roundway" class="radioSize" type="radio" name="radioOp" value="round"
+			checked> 왕복 &nbsp &nbsp <input id="oneway" class="radioSize" type="radio"
 			name="radioOp" value="oneway"> 편도 &nbsp &nbsp <input
-			class="radioSize" type="radio" name="radioOp" value="flightnv">
+			class="radioSize" type="radio" id="flightnvOp" name="radioOp" value="flightnv">
 		운행편명
 	</p>
+	<input disabled type="text" id="flightnv" name="flightnv" style="top:255px; position: absolute; left:400px; width: 130px; height: 30px;">
 
 	<input type="submit"
 		style="position: absolute; color: white; border: 0; outline: 0; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"
@@ -104,21 +105,59 @@ body {
 		style="top: 342px; left: 345px; position: absolute; height: 35px;">
 		<span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
 	</button>
-	<input class="selectbox" id ="depText" type="text" name="departure"
-		style="top: 342px; left: 152px"> <input class="selectbox"
-		type="text" name="arrive" id="arvText" style="top: 342px; left: 390px"> <input
-		class="selectbox" type="date" name="depdate"
-		style="top: 342px; left: 603px; width: 130px"> <input
-		class="selectbox" type="date" name="arrvdate"
-		style="top: 342px; left: 740px; width: 130px"> <input
-		class="selectbox" type="time" name="minimumtime"
+	<input class="selectbox" id="depText" type="text" name="departure"
+		style="top: 342px; left: 152px"> 
+		
+		<input class="selectbox"
+		type="text" name="arrive" id="arvText" style="top: 342px; left: 390px">
+	
+	<input class="selectbox" id="depdate" type="date" name="depdate"
+		style="top: 342px; left: 603px; width: 130px">
+		
+	<input
+		class="selectbox" id="arrvdate" type="date" name="arrvdate"
+		style="top: 342px; left: 740px; width: 130px"> 
+		
+	<select
+		class="selectbox" name="minimumtime"
 		style="top: 342px; left: 878px; width: 120px">
+		<%
+		for (int i = 1; i <= 24; i++) {
+		%>
+		<option value=<%=i%>>
+			<%=i%>시 00분</option>
+		<%
+			}
+		%>
+	</select>
 </form>
 <script>
 	// 출발지 목적지 스왑 버튼
-	$('#swapbt').click(function(){
+	$('#swapbt').click(function() {
 		var swapTemp = $('#depText').val();
 		$('#depText').val($('#arvText').val());
 		$('#arvText').val(swapTemp);
+	});
+	
+	// 검색 속성(왕복, 편도, 편명조회)라디오 박스에 따른 검색창 비활성화 및 활성화
+	$('#roundway').click(function(){
+        $('#depText').removeAttr("disabled");
+        $('#arvText').removeAttr("disabled");
+        $('#arrvdate').removeAttr("disabled");
+        $('#flightnv').attr("disabled",true);
+	});
+	
+	$('#oneway').click(function(){
+        $('#depText').removeAttr("disabled");
+        $('#arvText').removeAttr("disabled");
+        $('#arrvdate').removeAttr("disabled");
+        $('#arvText').attr("disabled",true);
+	});
+	
+	$('#flightnvOp').click(function(){
+        $('#depText').attr("disabled",true);
+        $('#arvText').attr("disabled",true);
+        $('#arrvdate').attr("disabled",true);
+        $('#flightnv').removeAttr("disabled");
 	});
 </script>
