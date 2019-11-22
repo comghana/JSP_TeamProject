@@ -6,15 +6,17 @@
 
 
 <style>
-	.pic_name{
-		font-size: 20px;
-		font-weight: bold;
-		left: 50%;
-	}
+.pic_name {
+	font-size: 20px;
+	font-weight: bold;
+	left: 50%;
+}
 </style>
 <div style="margin-top: 550px;">
-	<b style="font-size: 40px; left: 100px; position: absolute; z-index:10; top: 600px;"> > 추천 여행지 </b>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" >
+	<b
+		style="font-size: 40px; left: 100px; position: absolute; z-index: 10; top: 600px;">
+		> 추천 여행지 </b>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -23,7 +25,7 @@
 		</ol>
 
 		<!-- Wrapper for slides -->
-		
+
 		<div class="carousel-inner" style="left: 195px; width: 788px;">
 			<div class="item active">
 				<p class="pic_name" style="margin-left: 43%">코타키나발루</p>
@@ -42,14 +44,15 @@
 		</div>
 
 		<!-- Left and right controls -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev" style="left: 195px; top:40px; ">
-			<span class="glyphicon glyphicon-chevron-left"></span> <span
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev"
+			style="left: 195px; top: 40px;"> <span
+			class="glyphicon glyphicon-chevron-left"></span> <span
 			class="sr-only">Previous</span>
 		</a> <a class="right carousel-control" href="#myCarousel"
-			data-slide="next" style="right: 218px; top:40px;"> <span
+			data-slide="next" style="right: 218px; top: 40px;"> <span
 			class="glyphicon glyphicon-chevron-right"></span> <span
 			class="sr-only">Next</span>
 		</a>
-		
+
 	</div>
 </div>

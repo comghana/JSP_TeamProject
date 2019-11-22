@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style>
 .background {
 	background-color: #042759;
@@ -104,10 +104,10 @@ body {
 		style="top: 342px; left: 345px; position: absolute; height: 35px;">
 		<span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
 	</button>
-	<input class="selectbox" id ="depText" type="text" name="departure"
+	<input class="selectbox" id="depText" type="text" name="departure"
 		style="top: 342px; left: 152px"> <input class="selectbox"
-		type="text" name="arrive" id="arvText" style="top: 342px; left: 390px"> <input
-		class="selectbox" type="date" name="depdate"
+		type="text" name="arrive" id="arvText" style="top: 342px; left: 390px">
+	<input class="selectbox" type="date" name="depdate"
 		style="top: 342px; left: 603px; width: 130px"> <input
 		class="selectbox" type="date" name="arrvdate"
 		style="top: 342px; left: 740px; width: 130px"> <input
@@ -116,7 +116,7 @@ body {
 </form>
 <script>
 	// 출발지 목적지 스왑 버튼
-	$('#swapbt').click(function(){
+	$('#swapbt').click(function() {
 		var swapTemp = $('#depText').val();
 		$('#depText').val($('#arvText').val());
 		$('#arvText').val(swapTemp);
