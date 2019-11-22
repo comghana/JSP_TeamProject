@@ -21,7 +21,7 @@ li>a {
 			<li><a data-toggle="modal" style="left: 815px; text-decoration: none; position: absolute; color: #042759" href="#signin">Sign
 					in</a></li>
 			<li><a data-toggle="modal" style="left: 929px; text-decoration: none; background-color:#5E5E5E;color:#FFFFFF; top: 60px;
-                font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px; position: absolute;" href="#signup">Sign
+                font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px; position: absolute; border-radius: 5px" href="#signup">Sign
 					up</a></li>
 		</ul>
 	</div>
