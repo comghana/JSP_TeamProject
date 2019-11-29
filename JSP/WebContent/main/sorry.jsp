@@ -12,10 +12,8 @@ body {
 }
 
 #webView {
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
-	background:;
-	width: 1300px;
 	height: 1351px;
 	margin: 0 auto;
 	-webkit-transform: translate3d(0, 0, 0);
@@ -36,9 +34,9 @@ body {
 		<div id="contents" style="margin-left:350px;">
         <section>
           <article>
-              <img id = "sry" src="../img/sorry.png" alt="sorry" style="width:600px;"><br>
+              <img id = "sry" src="../img/sorry.png" alt="sorry" style="width:600px; margin-left: 20%"><br>
               <br>
-        <button type="button" class="btn btn-secondary" id = "aa" style="background-color: #585858;margin-left:243px;color:#FFFFFF;"
+        <button type="button" class="btn btn-secondary" id = "aa" style="background-color: #585858;margin-left:400px;color:#FFFFFF;"
         onclick="location.href='index.jsp'" >&nbsp&nbsp&nbsp이전&nbsp&nbsp&nbsp</button>
           </article>
         </section>

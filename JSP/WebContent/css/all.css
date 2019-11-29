@@ -57,7 +57,7 @@ footer {
 }
 
 #abc {
-  float:right;
+  margin-left: 10%;
 }
 #ab{
   color:rgb(4, 39, 89);

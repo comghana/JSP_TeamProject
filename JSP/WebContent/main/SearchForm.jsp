@@ -1,4 +1,3 @@
-<%@page import="java.awt.Button"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet"
@@ -24,6 +23,7 @@
 }
 
 .radioSize {
+	position: absolute;
 	height: 20px;
 	width: 20px;
 	margin-left: 200px;
@@ -50,87 +50,70 @@ body {
 	padding: 0;
 }
 
-#webView {
-	overflow: hidden;
-	position: relative;
-	background:;
-	width: 1200px;
-	height: 1351px;
-	margin: 0 auto;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0)
-}
-
-#webView[data-show-memo='true'] {
-	overflow: visible
-}
-
 .radio {
 	font-size: 20px;
 	color: white;
 	position: absolute;
-	top: 120px;
+	top: 250px;
 	left: 178px;
 	width: 280px;
 	height: 20px;
 	font-weight: bold;
 }
 </style>
+
 <div
-	style="position: absolute; top: 150px; left: 1px; width: 1199px; height: 327px;">
-	<img alt="" src="../img/r_bg.jpg">
+	style="position: absolute; top: 150px; left: 1px; width: 100%; height: 327px; background-image: url('../img/r_bg.jpg'); background-repeat: no-repeat; background-size: 100% auto;">
 </div>
-<p class="background">
-<div class="whereWego">어디로 여행갈까요?</div>
+<div style="position:absolute; margin-left: 18%; width: 100%; top: 0px;">
+	<p class="background">
+	<div class="whereWego">어디로 여행갈까요?</div>
 
-<p class="arrv_dep_font" style="top: 310px; left: 154px">출발</p>
-<p class="arrv_dep_font" style="top: 310px; left: 390px">도착</p>
-<p class="arrv_dep_font" style="top: 310px; left: 623px">가는날</p>
-<p class="arrv_dep_font" style="top: 310px; left: 750px">오는날</p>
-<p class="arrv_dep_font" style="top: 310px; left: 878px">최소 시간</p>
-<form action="" method="post">
-	<p class="radio">
-		<input id="roundway" class="radioSize" type="radio" name="radioOp" value="round"
-			checked> 왕복 &nbsp &nbsp <input id="oneway" class="radioSize" type="radio"
-			name="radioOp" value="oneway"> 편도 &nbsp &nbsp <input
-			class="radioSize" type="radio" id="flightnvOp" name="radioOp" value="flightnv">
-		운행편명
-	</p>
-	<input disabled type="text" id="flightnv" name="flightnv" style="top:255px; position: absolute; left:400px; width: 130px; height: 30px;">
+	<p class="arrv_dep_font" style="top: 310px; left: 154px">출발</p>
+	<p class="arrv_dep_font" style="top: 310px; left: 390px">도착</p>
+	<p class="arrv_dep_font" style="top: 310px; left: 623px">가는날</p>
+	<p class="arrv_dep_font" style="top: 310px; left: 750px">오는날</p>
+	<p class="arrv_dep_font" style="top: 310px; left: 878px">최소 시간</p>
+	<form action="" method="post">
+		<p class="radio">
+			<input id="roundway" class="radioSize" type="radio" name="radioOp"
+				value="round" checked> 왕복 &nbsp &nbsp <input id="oneway"
+				class="radioSize" type="radio" name="radioOp" value="oneway">
+			편도 &nbsp &nbsp <input class="radioSize" type="radio" id="flightnvOp"
+				name="radioOp" value="flightnv"> 운행편명
+		</p>
+		<input disabled type="text" id="flightnv" name="flightnv"
+			style="top: 255px; position: absolute; left: 400px; width: 130px; height: 30px;">
 
-	<input type="submit"
-		style="position: absolute; color: white; border: 0; outline: 0; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"
-		value="항공권 조회 →">
-	<button type="button" class="btn btn-default btn-lg" id="swapbt"
-		style="top: 342px; left: 345px; position: absolute; height: 35px;">
-		<span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
-	</button>
-	<input class="selectbox" id="depText" type="text" name="departure"
-		style="top: 342px; left: 152px"> 
-		
-		<input class="selectbox"
-		type="text" name="arrive" id="arvText" style="top: 342px; left: 390px">
-	
-	<input class="selectbox" id="depdate" type="date" name="depdate"
-		style="top: 342px; left: 603px; width: 130px">
-		
-	<input
-		class="selectbox" id="arrvdate" type="date" name="arrvdate"
-		style="top: 342px; left: 740px; width: 130px"> 
-		
-	<select
-		class="selectbox" name="minimumtime"
-		style="top: 342px; left: 878px; width: 120px">
-		<%
+		<input type="submit"
+			style="position: absolute; color: white; border: 0; outline: 0; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"
+			value="항공권 조회 →">
+		<button type="button" class="btn btn-default btn-lg" id="swapbt"
+			style="top: 342px; left: 345px; position: absolute; height: 35px;">
+			<span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+		</button>
+		<input class="selectbox" id="depText" type="text" name="departure"
+			style="top: 342px; left: 152px"> <input class="selectbox"
+			type="text" name="arrive" id="arvText"
+			style="top: 342px; left: 390px"> <input class="selectbox"
+			id="depdate" type="date" name="depdate"
+			style="top: 342px; left: 603px; width: 130px"> <input
+			class="selectbox" id="arrvdate" type="date" name="arrvdate"
+			style="top: 342px; left: 740px; width: 130px"> <select
+			class="selectbox" name="minimumtime"
+			style="top: 342px; left: 878px; width: 120px">
+			<%
 		for (int i = 1; i <= 24; i++) {
 		%>
-		<option value=<%=i%>>
-			<%=i%>시 00분</option>
-		<%
+			<option value=<%=i%>>
+				<%=i%>시 00분
+			</option>
+			<%
 			}
 		%>
-	</select>
-</form>
+		</select>
+	</form>
+</div>
 <script>
 	// 출발지 목적지 스왑 버튼
 	$('#swapbt').click(function() {
@@ -138,26 +121,26 @@ body {
 		$('#depText').val($('#arvText').val());
 		$('#arvText').val(swapTemp);
 	});
-	
+
 	// 검색 속성(왕복, 편도, 편명조회)라디오 박스에 따른 검색창 비활성화 및 활성화
-	$('#roundway').click(function(){
-        $('#depText').removeAttr("disabled");
-        $('#arvText').removeAttr("disabled");
-        $('#arrvdate').removeAttr("disabled");
-        $('#flightnv').attr("disabled",true);
+	$('#roundway').click(function() {
+		$('#depText').removeAttr("disabled");
+		$('#arvText').removeAttr("disabled");
+		$('#arrvdate').removeAttr("disabled");
+		$('#flightnv').attr("disabled", true);
 	});
-	
-	$('#oneway').click(function(){
-        $('#depText').removeAttr("disabled");
-        $('#arvText').removeAttr("disabled");
-        $('#arrvdate').removeAttr("disabled");
-        $('#arvText').attr("disabled",true);
+
+	$('#oneway').click(function() {
+		$('#depText').removeAttr("disabled");
+		$('#arvText').removeAttr("disabled");
+		$('#arrvdate').removeAttr("disabled");
+		$('#arvText').attr("disabled", true);
 	});
-	
-	$('#flightnvOp').click(function(){
-        $('#depText').attr("disabled",true);
-        $('#arvText').attr("disabled",true);
-        $('#arrvdate').attr("disabled",true);
-        $('#flightnv').removeAttr("disabled");
+
+	$('#flightnvOp').click(function() {
+		$('#depText').attr("disabled", true);
+		$('#arvText').attr("disabled", true);
+		$('#arrvdate').attr("disabled", true);
+		$('#flightnv').removeAttr("disabled");
 	});
 </script>

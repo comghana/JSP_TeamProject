@@ -13,37 +13,40 @@ li>a {
 	position: absolute;
 }
 </style>
-<div style="margin-left: 10%;">
-	<a href="index.jsp"><img src="../img/logo.jpg" alt="AF"
-		style="width: 128px; height: 128px"></a>
-	<div id="header_nav">
-		<ul>
-			<li><a data-toggle="modal" style="left: 815px; text-decoration: none; position: absolute; color: #042759" href="#signin">Sign
-					in</a></li>
-			<li><a data-toggle="modal" style="left: 929px; text-decoration: none; background-color:#5E5E5E;color:#FFFFFF; top: 60px;
-                font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px; position: absolute; border-radius: 5px" href="#signup">Sign
-					up</a></li>
-		</ul>
+<div style="margin-left: 30%">
+	<div style="margin-left: 3%;">
+		<a href="index.jsp"><img src="../img/logo.jpg" alt="AF"
+			style="width: 128px; height: 128px"></a>
+		<div id="header_nav">
+			<ul>
+				<li><a data-toggle="modal"
+					style="left: 1200px; text-decoration: none; position: absolute; color: #042759"
+					href="#signin">Sign in</a></li>
+				<li><a data-toggle="modal"
+					style="left: 1300px; text-decoration: none; background-color: #5E5E5E; color: #FFFFFF; top: 60px; font-size: 16px; padding-left: 20px; padding-right: 20px; padding-top: 8px; padding-bottom: 8px; position: absolute; border-radius: 5px"
+					href="#signup">Sign up</a></li>
+			</ul>
+		</div>
 	</div>
-</div>
-<div class="modal fade" id="signin" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">LOGIN</h4>
+	<div class="modal fade" id="signin" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">LOGIN</h4>
+				</div>
+				<div class="modal-body"
+					style="background: url(../img/login.jpg); background-repeat: inherit; background-size: 100%; width: 580px; height: 280px;">
+					<input type="text" class="form-control" name="id" placeholder="ID"
+						style="width: 138px; margin-left: 275px; margin-top: 30px;">
+					<input type="password" class="form-control" name="password"
+						placeholder="PASSWORD"
+						style="width: 138px; margin-left: 275px; margin-top: 2px;">
+					<button type="button" class="btn btn-default" data-dismiss="modal"
+						style="font-size: 18px; background-color: #315180; color: #FFFFFF; padding-left: 25px; padding-right: 25px; padding-top: 9px; padding-bottom: 9px; margin-left: 440px; margin-top: 12px;">Login</button>
+				</div>
+				<div class="modal-footer"></div>
 			</div>
-			<div class="modal-body"
-				style="background: url(../img/login.jpg); background-repeat: inherit; background-size: 100%; width: 580px; height: 280px;">
-				<input type="text" class="form-control" name="id" placeholder="ID"
-					style="width: 138px; margin-left: 275px; margin-top: 30px;">
-				<input type="password" class="form-control" name="password"
-					placeholder="PASSWORD"
-					style="width: 138px; margin-left: 275px; margin-top: 2px;">
-				<button type="button" class="btn btn-default" data-dismiss="modal"
-					style="font-size: 18px; background-color: #315180; color: #FFFFFF; padding-left: 25px; padding-right: 25px; padding-top: 9px; padding-bottom: 9px; margin-left: 440px; margin-top: 12px;">Login</button>
-			</div>
-			<div class="modal-footer"></div>
 		</div>
 	</div>
 </div>
