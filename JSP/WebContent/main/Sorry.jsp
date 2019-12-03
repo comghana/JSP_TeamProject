@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sorry</title>
 <style>
 body {
 	margin: 0;
@@ -28,7 +28,7 @@ body {
 <body>
 	<div id="webView">
 		<header>
-			<jsp:include page="top.jsp" flush="false" />
+			<jsp:include page="Top.jsp" flush="false" />
 		</header>
 		<br><br><br>
 		<div id="contents" style="margin-left:350px;">
@@ -42,7 +42,7 @@ body {
         </section>
         <br><br>
       </div>
-			<jsp:include page="bottom.jsp" flush="false" />
+			<jsp:include page="Bottom.jsp" flush="false" />
 		</footer>
 	</div>
 </body>

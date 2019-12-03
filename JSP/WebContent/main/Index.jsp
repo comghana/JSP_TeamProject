@@ -30,7 +30,7 @@ body {
 <body>
 	<div id="webView">
 		<header>
-			<jsp:include page="top.jsp" flush="false" />
+			<jsp:include page="Top.jsp" flush="false" />
 		</header>
 		<div>
 			<section id="areaMain">
@@ -39,11 +39,11 @@ body {
 		</div>
 		<div id="content">
 			<section id="areaChangePic">
-				<jsp:include page="imgChange.jsp" flush="false" />
+				<jsp:include page="ImgChange.jsp" flush="false" />
 			</section>
 		</div>
 		<footer style="bottom: 500px;">
-			<jsp:include page="bottom.jsp" flush="false" />
+			<jsp:include page="Bottom.jsp" flush="false" />
 		</footer>
 	</div>
 </body>
