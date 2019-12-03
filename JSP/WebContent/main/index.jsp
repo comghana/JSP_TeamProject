@@ -6,10 +6,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+body {
+	margin: 0;
+	padding: 0;
+}
 
 #webView {
-	overflow: visible;
+	overflow: hidden;
 	position: relative;
+	background:;
+	width: 1300px;
 	height: 1351px;
 	margin: 0 auto;
 	-webkit-transform: translate3d(0, 0, 0);

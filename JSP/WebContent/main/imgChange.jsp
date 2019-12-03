@@ -38,7 +38,7 @@
 
 		<!-- Wrapper for slides -->
 
-		<div class="carousel-inner" style="left: 250px; width: 788px;">
+		<div class="carousel-inner" style="left: 245px; width: 788px;">
 			<div class="item active">
 				<p class="pic_name" style="margin-left: 43%">코타키나발루</p>
 				<img src="../img/kota.jpg" alt="">
@@ -57,11 +57,11 @@
 
 		<!-- Left and right controls -->
 		<a class="left carousel-control" href="#myCarousel" data-slide="prev"
-			style="left: 250px; top: 40px;"> <span
+			style="left: 245px; top: 40px;"> <span
 			class="glyphicon glyphicon-chevron-left"></span> <span
 			class="sr-only">Previous</span>
 		</a> <a class="right carousel-control" href="#myCarousel"
-			data-slide="next" style="right: 263px; top: 40px;"> <span
+			data-slide="next" style="right: 267px; top: 40px;"> <span
 			class="glyphicon glyphicon-chevron-right"></span> <span
 			class="sr-only">Next</span>
 		</a>

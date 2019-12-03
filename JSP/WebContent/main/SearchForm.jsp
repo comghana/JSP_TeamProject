@@ -65,7 +65,7 @@ body {
 <div
 	style="position: absolute; top: 150px; left: 1px; width: 100%; height: 327px; background-image: url('../img/r_bg.jpg'); background-repeat: no-repeat; background-size: 100% auto;">
 </div>
-<div style="position:absolute; margin-left: 18%; width: 100%; top: 0px;">
+<div style="position:absolute; margin-left: 3%; width: 100%; top: 0px;">
 	<p class="background">
 	<div class="whereWego">어디로 여행갈까요?</div>
 
