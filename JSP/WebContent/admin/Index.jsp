@@ -16,12 +16,14 @@
   <body>
   <%@ include file="Top.jsp" %>
     <table align="center" style="margin-top:300px;">
-        <tr>
-            <td><button type="submit" style="border: none; "><img src="imgs/k.png"></button></td>
-            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-            <td><button type="submit" style="border: none;"><img src="imgs/g.png"></button></td>
-        </tr>
+    	 <form name="" method="post" action="MemberMgr.jsp">
+        	<tr>
+          	  <td><button type="submit" style="border: none; "><img src="imgs/k.png"></button></td>
+          	  <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          	    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+          	  <td><button type="submit" style="border: none;"><img src="imgs/g.png"></button></td>
+       	 </tr>
+        </form>
         <tr align="center">
           <td style="font-weight:bold; font-size:20px;">회원 관리</td>
           <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp

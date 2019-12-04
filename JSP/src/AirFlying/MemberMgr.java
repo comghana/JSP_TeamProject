@@ -3,6 +3,8 @@ package AirFlying;
 import java.sql.*;
 import java.util.Vector;
 
+import AirFlying.RegisterBean;
+
 
 public class MemberMgr {
 
@@ -94,21 +96,20 @@ public class MemberMgr {
         return flag;
     }
     
-    public boolean deleteMember(String mem_id) {
+    public boolean deleteMember(RegisterBean regBean) {
     	Connection con = null;
-        Statement pstmt = null;
+        PreparedStatement pstmt = null;
         boolean flag = false;
        
         try {
         	con = pool.getConnection();
-        	//String strQuery = "delete from member where id ='" + mem_id + "';";
-        	pstmt = con.createStatement();
-            int count = pstmt.executeUpdate("delete from member where id = '" + mem_id + "';");
-            
+        	pstmt = con.prepareStatement("delete from member where id = ?;");
+        	pstmt.setString(1, regBean.getMem_id());
+            int count = pstmt.executeUpdate();
             if (count == 1) {
                 flag = true;
             }
-        }catch (Exception ex) {
+        }catch (Exception ex) {//
             System.out.println("Exception" + ex);
         } finally {
             pool.freeConnection(con, pstmt);

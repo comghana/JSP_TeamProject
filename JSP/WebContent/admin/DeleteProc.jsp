@@ -8,7 +8,7 @@ request.setCharacterEncoding("UTF-8");
 <jsp:useBean id="regBean" class="AirFlying.RegisterBean" />
 <jsp:setProperty name="regBean" property="*" />
 <%
-    boolean flag = memMgr.deleteMember("mem_id");
+    boolean flag = memMgr.deleteMember(regBean);
 %>
     
 <!DOCTYPE html>
