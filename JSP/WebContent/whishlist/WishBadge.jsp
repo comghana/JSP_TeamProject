@@ -5,9 +5,10 @@
 .tg {
 	border-collapse: collapse;
 	border-spacing: 0;
-	border-width: 1px;
+/* 	border-width: 1px;
 	border-style: solid;
-	border-color: black;
+	border-color: black; */
+	background-color: white;
 }
 
 .tg td {
@@ -45,9 +46,9 @@
 	<table class="tg">
 		<tr>
 			<th class="pic" colspan="2" rowspan="3"><img
-				src="img/vietjet.PNG" alt="" stlye="" width="100px"></th>
+				src="../img/vietjet.PNG" alt="" stlye="" width="100px"></th>
 			<th class="empty"></th>
-			<th class="g_time" align="center" style="padding-right: 20px;">4시간
+			<th class="g_time" align="center" style="padding-left: 40px;">4시간
 				20분</th>
 			<th class="empty"></th>
 			<th class="trash"><img src="../img/trash.png" alt="" width=20px></th>

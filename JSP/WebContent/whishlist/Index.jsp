@@ -35,9 +35,10 @@ body {
 		<div>
 			<jsp:include page="Top.jsp" flush="false" />
 		</div>
-<%-- 		<footer style="bottom: 500px;">
-			<jsp:include page="Bottom.jsp" flush="false" />
-		</footer> --%>
+		<div style="margin-top: 10%;margin-left:25%;z-index: 10">
+			<jsp:include page="WishBadge.jsp" flush="false" />
+		</div>
+
 	</div>
 </body>
 </html>
