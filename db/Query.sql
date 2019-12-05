@@ -75,3 +75,6 @@ create table domesticFlight (
 select * from airport_info;
 select * from flightschedulelist;
 select * from domesticFlight;
+
+
+rename table FlightScheduleList to internationalFlight;
