@@ -149,6 +149,18 @@ body {
 	
 	// 출발지, 도착지등 입력필드 수정 감지
 	$("#depText").on("change paste keyup", function() {
+		console.clear();
+		<%
+		for(int i=0; i < vc.size(); i++){
+		%>
+			var tempStrPort = "<%=vc.get(i).getPortCode()%>";
+			var tempStrName = "<%=vc.get(i).getkName()%>";
+			if(tempStrName.indexOf($("#depText").val())!= -1 || tempStrPort.indexOf($("#depText").val())!= -1){
+				console.log("<%=vc.get(i).getPortCode()%> / <%=vc.get(i).getkName()%>");
+			}
+			
+		<%}%>
+
 		
 	});
 	
