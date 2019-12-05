@@ -77,7 +77,7 @@ public class ParsingFlightScheduleListInternational {
 	    	   Class.forName(JDBC_DRIVER);
 	    	   conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 	    	   System.out.println("conn 완료");
-	    	   String qu = "insert into FlightScheduleList(airline, airport, city, iotype,"
+	    	   String qu = "insert into internationalFlight(airline, airport, city, iotype,"
 	    	   		+ "flight_num, stdate, eddate, time, mon, tue, wed, thu, fri,"
 	    	   		+ "sat, sun) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 	    	   //데이터 받기
