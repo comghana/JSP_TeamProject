@@ -12,13 +12,13 @@ import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class ParsingFlightScheduleList {
+public class ParsingFlightScheduleListDomestic {
 	
 	public static void main(String[] args) throws IOException {
 		System.out.println("start");
 		String str = "";
-		for (int i = 0; i <= 1811; i++) {
-			StringBuilder urlBuilder = new StringBuilder("http://openapi.airport.co.kr/service/rest/FlightScheduleList/getIflightScheduleList"); /*URL*/
+		for (int i = 0; i <= 2557; i++) {
+			StringBuilder urlBuilder = new StringBuilder("http://openapi.airport.co.kr/service/rest/FlightScheduleList/getDflightScheduleList"); /*URL*/
 			urlBuilder.append("?" + URLEncoder.encode("ServiceKey","UTF-8") + "=t7JNaN3czxsOj55Bhi1Rjhg6gaGj%2BkU8ey%2FDyv8QcdVW%2BTqfAv5DnWi3q81c2h%2B%2BgafZ2NctqwKCU3wu6Djxag%3D%3D"); /*Service Key*/
 			urlBuilder.append("&" + "pageNo=" + i); /*인증키*/
         
@@ -46,10 +46,10 @@ public class ParsingFlightScheduleList {
 		System.out.println("finish load");
 		//필요한 데이터를 얻어오기
 		System.out.println("start token");
-		final String []token = {"<airlineKorean>", "<airport>", "<city>", "<internationalEddate>",
-				"<internationalFri>", "<internationalIoType>", "<internationalMon>", "<internationalNum>",
-				"<internationalSat>", "<internationalStdate>", "<internationalSun>", "<internationalThu>",
-				"<internationalTime>", "<internationalTue>", "<internationalWed>"};
+		final String []token = {"<airlineKorean>", "<arrivalcity>", "<domesticArrivalTime>", "<domesticEddate>",
+				"<domesticFri>", "<domesticMon>", "<domesticNum>", "<domesticSat>",
+				"<domesticStartTime>", "<domesticStdate>", "<domesticSun>", "<domesticThu>",
+				"<domesticTue>", "<domesticWed>", "<startcity>"};
 		String[] parse = null;
 		ArrayList<String> sub[] = new ArrayList[15];
 	
@@ -77,26 +77,26 @@ public class ParsingFlightScheduleList {
 	    	   Class.forName(JDBC_DRIVER);
 	    	   conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 	    	   System.out.println("conn 완료");
-	    	   String qu = "insert into FlightScheduleList(airline, airport, city, iotype,"
-	    	   		+ "flight_num, stdate, eddate, time, mon, tue, wed, thu, fri,"
-	    	   		+ "sat, sun) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+	    	   String qu = "insert into domesticFlight(d_airline, start_city, end_city, d_sttime,"
+	    	   		+ "d_edtime, d_stdate, d_eddate, d_flightnum, d_mon, d_tue, d_wed, d_thu, d_fri,"
+	    	   		+ "d_sat, d_sun) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 	    	   //데이터 받기
 	    	   for(int i = 0; i < sub[0].size(); i++) {
 	    		   smt = conn.prepareStatement(qu);
 	    		   smt.setString(1, sub[0].get(i));
-	    		   smt.setString(2, sub[1].get(i));
-	    		   smt.setString(3, sub[2].get(i));
-	    		   smt.setString(4, sub[5].get(i));
-	    		   smt.setString(5, sub[7].get(i));
+	    		   smt.setString(2, sub[14].get(i));
+	    		   smt.setString(3, sub[1].get(i));
+	    		   smt.setString(4, sub[8].get(i));
+	    		   smt.setString(5, sub[2].get(i));
 	    		   smt.setString(6, sub[9].get(i));
 	    		   smt.setString(7, sub[3].get(i));
-	    		   smt.setString(8, sub[12].get(i));
-	    		   smt.setString(9, sub[6].get(i));
-	    		   smt.setString(10, sub[13].get(i));
-	    		   smt.setString(11, sub[14].get(i));
+	    		   smt.setString(8, sub[6].get(i));
+	    		   smt.setString(9, sub[5].get(i));
+	    		   smt.setString(10, sub[12].get(i));
+	    		   smt.setString(11, sub[13].get(i));
 	    		   smt.setString(12, sub[11].get(i));
 	    		   smt.setString(13, sub[4].get(i));
-	    		   smt.setString(14, sub[8].get(i));
+	    		   smt.setString(14, sub[7].get(i));
 	    		   smt.setString(15, sub[10].get(i));
 	    		   int r = smt.executeUpdate();
 	        	   System.out.println("변경된 row : " + r);
