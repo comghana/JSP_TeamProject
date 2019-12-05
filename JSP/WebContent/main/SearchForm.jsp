@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page import="java.util.*, AirFlying.*"%>
+<jsp:useBean id="airportLoad" class="AirFlying.AirportLoadMgr" />
+<% Vector<SearchLoadBean> vc = airportLoad.loadData(); %>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -143,4 +146,14 @@ body {
 		$('#arrvdate').attr("disabled", true);
 		$('#flightnv').removeAttr("disabled");
 	});
+	
+	// 출발지, 도착지등 입력필드 수정 감지
+	$("#depText").on("change paste keyup", function() {
+		
+	});
+	
+	$("#arvText").on("change paste keyup", function() {
+		   
+	});
+	
 </script>
