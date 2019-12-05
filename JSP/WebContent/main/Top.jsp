@@ -56,7 +56,7 @@ li>a {
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					Air Flying</h4>
 			</div>
-			<form>
+			<form method="post" action="RegisterMgr.jsp">
 				<div class="modal-body">
 					<table class="table table-boardered">
 						<tr>
@@ -135,10 +135,10 @@ li>a {
 					</table>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal"
-						style="font-size: 20px; background-color: #042759; color: #FFFFFF; margin-right: 230px;">Sign
-						up</button>
+					<input type="submit" class="btn btn-default"
+						style="font-size: 20px; background-color: #042759; color: #FFFFFF; margin-right: 230px;" value="Sign up">
 				</div>
+			
 			</form>
 		</div>
 	</div>

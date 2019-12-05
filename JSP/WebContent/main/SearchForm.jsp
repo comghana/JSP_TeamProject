@@ -158,10 +158,7 @@ body {
 			if(tempStrName.indexOf($("#depText").val())!= -1 || tempStrPort.indexOf($("#depText").val())!= -1){
 				console.log("<%=vc.get(i).getPortCode()%> / <%=vc.get(i).getkName()%>");
 			}
-			
 		<%}%>
-
-		
 	});
 	
 	$("#arvText").on("change paste keyup", function() {
