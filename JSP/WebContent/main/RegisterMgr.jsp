@@ -23,6 +23,7 @@
 		 %>	
 		<script>
 		alert("비정상적인 접근 혹은 오류가 발생하였습니다.");
+		history.back();
 		</script>
 		<%
 	}
