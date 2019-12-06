@@ -14,22 +14,23 @@ li>a {
 	font-size: 16px;
 	position: absolute;
 }
+
 </style>
 <div style="margin-left: 10%;">
 	<a href="index.jsp"><img src="../img/logo.jpg" alt="AF"
-		style="width: 128px; height: 128px"></a>
-		<% if(false/* request.getAttribute("loginSession").equals("ok") */){ %>
-			<div id="header_nav">
+		style="width: 128px; height: 128px">
+		<% if(true/* request.getAttribute("loginSession").equals("ok") */){ %>
+			<div id="header_nav" style="margin-right: 200px">
 		<ul style="font-weight:bold;font-size:20px;">
-			<a href="#Wish_Index.jsp"><img src="../img/wishlist.PNG"></a>
-			<a href="#"><img src="../img/user.PNG" width="5%"></a>
+			<a href="#Wish_Index.jsp"><img src="../img/wishlist.PNG" style="width: 118px; height: 40px"></a>
+			<img src="../img/user.PNG" width="29px" height="25px">
 			장지은님, 어서오세요 &nbsp&nbsp
 			<button data-toggle="modal" type="button" class="btn btn-default" href="#"style="background-color:#5E5E5E;color:#FFFFFF;
                 font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px;">LOGOUT</button>
 		</ul>
 	</div>
 	<%} else{%>
-			<div id="header_nav">
+			<div id="header_nav" style="margin-right: 200px">
 		<ul>
 			<button data-toggle="modal" type="button" class="btn btn-default" href="#signin" style="border:0;outline:0;color:#315180;
                 font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px;">Sign in</button>
@@ -39,6 +40,7 @@ li>a {
 		</ul>
 	</div>
 	<%}%>
+	</a>
 </div>
 <div class="modal fade" id="signin" role="dialog">
 	<div class="modal-dialog">
