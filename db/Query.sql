@@ -73,6 +73,7 @@ create table domesticFlight (
 
 rename table FlightScheduleList to internationalFlight;
 
+select * from admin;
 select * from airport_info;
 select * from internationalFlight;
 select * from domesticFlight;
