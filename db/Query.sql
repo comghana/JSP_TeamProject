@@ -29,7 +29,7 @@ CREATE TABLE AIRPORT_INFO (
 
 
 
-create table FlightScheduleList(
+create table internationalFlight(
 	id int NOT NULL AUTO_INCREMENT,
     airline varchar(20) not null, 
     airport varchar(30) not null, /*기준*/
@@ -159,3 +159,19 @@ create table wish_list (
     flight_id int not null,
     add_date TIMESTAMP DEFAULT NOW()
 );
+
+create table recommend(
+	city_name varchar(20) primary key,
+    file_name varchar(20),
+    status char(3) default 'out'
+);
+
+insert into recommend values('코타키나발루', 'kota.jpg', 'in');
+insert into recommend values('뉴욕', 'newyork.jpg', 'in');
+insert into recommend values('다낭', 'danang.jpg', 'in');
+insert into recommend(city_name, file_name) values
+	('북경', 'bookkeong.jpg'), ('로스앤젤레스', 'la.jpg'), 
+    ('상하이', 'sanghae.jpg'), ('시카고', 'sikago.jpg'), 
+    ('바티칸', 'vatikan.jpg'), ('베니스', 'venis.jpg');
+    
+select * from recommend;

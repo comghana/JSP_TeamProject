@@ -3,8 +3,12 @@
 		document.deleteMem.mem_id.value=mem_id;
 		document.deleteMem.submit();
 	}
-//product 
 
+	function UpdateReco(reco_name) {
+		document.updateReco.reco_name.value=reco_name;
+		document.updateReco.submit();
+	}
+	
 	function productDetail(no) {
 		document.detail.no.value=no;
 		document.detail.submit();

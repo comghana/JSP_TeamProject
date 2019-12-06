@@ -20,7 +20,9 @@
         	<form name="" method="post" action="MemberMgr.jsp">
           	  <td><button type="submit" style="border: none; "><img src="../img/member.png"></button></td>
           	 </form>
+			<form name="" method="post" action="Recommend.jsp">
           	  <td><button type="submit" style="border: none; padding-left: 10px;"><img src="../img/pic.png"></button></td>
+          	</form>
        	 </tr>
         <tr align="center">
           <td style="font-weight:bold; font-size:20px;">회원 관리</td>
