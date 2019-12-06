@@ -33,7 +33,8 @@ public class ParsingFlightScheduleListInternational {
        		} else {
        			rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));    
        		}
-       		StringBuilder sb = new StringBuilder();
+       		StringBuilder sb = new StringBuilder();0
+       		
        		String line;
        		while ((line = rd.readLine()) != null) {
        			sb.append(line);

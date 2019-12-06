@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+		<%@ page import="java.util.*, AirFlying.*"%>
+<jsp:useBean id="member" class="AirFlying.MemberMgr" />
 <link href="../css/all.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -74,11 +76,11 @@ li>a {
 					<table class="table table-boardered">
 						<tr>
 							<th>아이디</th>
-							<td><input type="text" class="form-control" name="id"
+							<td><input type="text" class="form-control" name="id" id="id"
 								placeholder="ID" style="width: 200px;">
-								<button type="button" class="btn btn-default"
+								<button type="button"  class="btn btn-primary"
 									data-dismiss="modal"
-									style="font-size: 10px; background-color: #042759; color: #FFFFFF;">중복확인</button></td>
+									style="font-size: 10px; background-color: #042759; color: #FFFFFF;" id="idCheck" href="#signup">중복확인</button></td>
 						</tr>
 						<tr>
 							<th>비밀번호</th>
@@ -151,7 +153,16 @@ li>a {
 					<input type="submit" class="btn btn-default"
 						style="font-size: 20px; background-color: #042759; color: #FFFFFF; margin-right: 230px;" value="Sign up">
 				</div>
-			
+				<script>
+				$('#idCheck').click(function(){
+					if( $('#id').val() == ""){
+						alert("아이디를 입력해주세요.")
+					}else{
+						url="IdCheck.jsp?mem_id=" + $('#id').val();
+						window.open(url,"post","width=100,height=100");
+					}
+				});
+				</script>
 			</form>
 		</div>
 	</div>
