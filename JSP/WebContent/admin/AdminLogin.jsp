@@ -10,7 +10,7 @@
     <table align="center">
         <tr>
             <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  ID  &nbsp&nbsp</th>
-            <td><input type="text" name="admin_id" placeholder="ID"
+            <td><input type="text" name="admin_id"
               style="width:200px;height:30px;">
             </td>
         </tr>
@@ -18,7 +18,7 @@
         <br>
         <tr>
             <th>  PASSWORD  </th>
-            <td><input type="password" name="admin_passwd" placeholder="PASSWORD"
+            <td><input type="password" name="admin_passwd"
               style="width:200px;height:30px;"></td>
         </tr>
        <tr> 
