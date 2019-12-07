@@ -5,6 +5,7 @@ public class RecoBean {
     private String reco_name;
     private String reco_file;
     private String reco_status;
+    
 	public String getReco_name() {
 		return reco_name;
 	}

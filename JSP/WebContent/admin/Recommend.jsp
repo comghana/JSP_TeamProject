@@ -6,6 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title>Recommend</title>
+    <script language="JavaScript" src="script.js"></script>
     <style>
     table {
     margin-left: auto;
@@ -40,7 +41,7 @@
    <%Vector vResult= recoM.getRecoList();%>
   <h2 style="text-align:center;">추천여행지 관리</h2>
   <div>
-  <table>
+  <table align="center">
     <th>대륙</th>
     <th>나라</th>
     <th>도시</th>

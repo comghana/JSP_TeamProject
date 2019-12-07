@@ -79,13 +79,13 @@ public class RecoMgr {
         PreparedStatement pstmt = null;
         boolean flag = false;
         String qu1 = "update recomment set status='out' where city_name = ?;";
-        String qu2 = "update recomment set status='in' where city_name = ?;";
+        /*String qu2 = "update recomment set status='in' where city_name = ?;";
         String result = null;
         if(recoBean.getReco_status() == "in") result = qu1;
-        else result = qu2;
+        else result = qu2;*/
         try {
         	con = pool.getConnection();
-        	pstmt = con.prepareStatement(result);
+        	pstmt = con.prepareStatement(qu1);
         	pstmt.setString(1, recoBean.getReco_name());
             int count = pstmt.executeUpdate();
             if (count == 1) {

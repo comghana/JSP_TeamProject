@@ -15,15 +15,12 @@ div {position:relative; align:center;}
 <title>업데이트 확인</title>
 </head>
 <body>
-	<form name="reForm" method="post" action="UpdateImageStatusProc.jsp">
+	<form name="reForm1" method="post" action="UpdateImageStatusProc.jsp">
 	<div>
 	<h3><%=recoBean.getReco_name()%></h3>
-	<%if (recoBean.getReco_status() == "in"){ %>
-	<input class="btn" type="submit" value="OUT"></input>
-	<%} else { %>
-	<input class="btn" type="submit" value="IN"></input>
-	<%} %>
-	<input type="hidden" name="reco_name" value="<%=reco_name %>">
+	<input class="btn" type="submit" value="status change">
+	</input>
+	<input type="hidden" name="reco_name" value="<%=reco_name%>">
 	</div>
 	</form>
 </body>

@@ -38,7 +38,8 @@ create table internationalFlight(
     flight_num varchar(15) not null,
     stdate varchar(30) not null,
     eddate varchar(30) not null,
-    time int not null,
+	time char(4) not null,
+    edtime char(4) not null default '0000',
     mon char(1) not null,
     tue char(1) not null,
     wed char(1) not null,
@@ -50,14 +51,14 @@ create table internationalFlight(
 );
 
 
-
 create table domesticFlight (
 	d_id int NOT NULL AUTO_INCREMENT,
     d_airline varchar(20) not null,
     start_city varchar(30) not null,
     end_city varchar(30) not null,
-    d_sttime int not null,
-    d_edtime int not null,
+    iotype char(3) not null default 'out',
+    d_sttime char(4),
+    d_edtime char(4),
     d_stdate varchar(30) not null,
     d_eddate varchar(30) not null,
     d_flightnum varchar(15) not null,
@@ -71,12 +72,24 @@ create table domesticFlight (
     primary key(d_id)
 );
 
-rename table FlightScheduleList to internationalFlight;
+alter table domesticflight modify column d_flightnum varchar(15) not null  after iotype;
+alter table domesticflight modify column d_sttime int not null after d_eddate;
+alter table domesticflight modify column d_edtime int not null after d_sttime;
+alter table domesticflight modify column d_id int not null;
+alter table domesticflight drop column d_id;
+alter table domesticflight add column I_D char(1) not null default 'D';
+
+alter table internationalflight modify column id int not null;
+alter table internationalflight drop column id;
+alter table internationalflight add column I_D char(1) not null default 'I';
+
 
 select * from admin;
 select * from airport_info;
 select * from internationalFlight;
+select count(*) from internationalflight;
 select * from domesticFlight;
+select count(*) from domesticflight;
 
 ALTER TABLE AIRPORT_INFO ADD PRIMARY KEY(PORT_CODE);
 DELETE FROM AIRPORT_INFO WHERE PORT_CODE = 'NKM';
@@ -153,6 +166,13 @@ FOREIGN KEY(end_CITY)
 references AIRPORT_INFO(KNAME);
 
 /* 운행 테이블 합치기*/
+select * from internationalflight union select * from domesticflight;
+INSERT ignore into internationalflight select * from domesticflight;
+select * from internationalflight where I_D = 'D';
+select count(*) from internationalflight;
+drop table domesticflight;
+rename table internationalflight to flight;
+select count(*) from flight;
 
 create table wish_list (
 	mem_id varchar(30) not null,
