@@ -23,7 +23,7 @@ li>a {
 		<% if(session.getAttribute("loginSession") != null){ %>
 			<div id="header_nav" style="margin-right: 200px">
 		<ul style="font-weight:bold;font-size:20px;">
-			<a href="#Wish_Index.jsp"><img src="../img/wishlist.PNG" style="width: 118px; height: 40px"></a>
+			<a href="Wish_Index.jsp"><img src="../img/wishlist.PNG" style="width: 118px; height: 40px"></a>
 			<img src="../img/user.PNG" width="29px" height="25px">
 			<%= session.getAttribute("loginSession") %>님, 어서오세요 &nbsp&nbsp
 			<input data-toggle="modal" type="button" class="btn btn-default" onclick="location.href='LogoutMgr.jsp'" style="background-color:#5E5E5E;color:#FFFFFF;

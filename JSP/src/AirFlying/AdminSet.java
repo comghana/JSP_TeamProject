@@ -13,7 +13,6 @@ public class AdminSet {
         }
     }
 
-    
     public boolean adminCheck(String admin_id, String admin_passwd) {
         Connection con = null;
         PreparedStatement pstmt = null;
