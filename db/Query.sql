@@ -172,7 +172,7 @@ select * from internationalflight where I_D = 'D';
 select count(*) from internationalflight;
 drop table domesticflight;
 rename table internationalflight to flight;
-select count(*) from flight;
+select * from flight;
 
 create table wish_list (
 	mem_id varchar(30) not null,

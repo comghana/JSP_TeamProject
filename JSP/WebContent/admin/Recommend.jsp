@@ -42,9 +42,9 @@
   <h2 style="text-align:center;">추천여행지 관리</h2>
   <div>
   <table align="center">
-    <th>대륙</th>
-    <th>나라</th>
     <th>도시</th>
+    <th>파일이름</th>
+    <th>상태</th>
     <th>추가여부</th>
     <%
     for(int i = 0; i<vResult.size(); i++) {
@@ -53,7 +53,7 @@
     <tr>
       <td><%=recoBean.getReco_name()%></td>
       <td><%=recoBean.getReco_file()%></td>
-      <td><%=recoBean.getReco_name()%></td>
+      <td><%=recoBean.getReco_status()%></td>
       <td><a class="btn" href="javascript:UpdateReco('<%=recoBean.getReco_name()%>')">관리</a></td>
     </tr>
     <%}%>
