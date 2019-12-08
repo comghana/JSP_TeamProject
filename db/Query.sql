@@ -190,20 +190,20 @@ create table wish_list (
     add_date TIMESTAMP DEFAULT NOW()
 );
 
-create table recommend(
+create table city(
 	city_name varchar(20) primary key,
-    file_name varchar(20),
-    status char(3) default 'out'
+    city_file varchar(20),
+    city_IO char(3) default 'out'
 );
 
-insert into recommend values('코타키나발루', 'kota.jpg', 'in');
-insert into recommend values('뉴욕', 'newyork.jpg', 'in');
-insert into recommend values('다낭', 'danang.jpg', 'in');
-insert into recommend(city_name, file_name) values
-	('북경', 'bookkeong.jpg'), ('로스앤젤레스', 'la.jpg'), 
-    ('상하이', 'sanghae.jpg'), ('시카고', 'sikago.jpg'), 
-    ('바티칸', 'vatikan.jpg'), ('베니스', 'venis.jpg');
+insert into city values('KotaKinabalu', 'kota.jpg', 'in');
+insert into city values('New York', 'newyork.jpg', 'in');
+insert into city values('Da Nang', 'danang.jpg', 'in');
+insert into city(city_name, city_file) values
+	('Bei Jing', 'bookkeong.jpg'), ('Los Angeles', 'la.jpg'), 
+    ('Shang Hai', 'sanghae.jpg'), ('Chicago', 'sikago.jpg'), 
+    ('Vaticanae', 'vatikan.jpg'), ('Venice', 'venis.jpg');
     
-select * from recommend;
 
+select * from city;
 

@@ -3,12 +3,12 @@
 		document.deleteMem.mem_id.value=mem_id;
 		document.deleteMem.submit();
 	}
-
-	function UpdateReco(reco_name) {
-		document.updateReco.reco_name.value=reco_name;
-		document.updateReco.submit();
-	}
 	
+	function UpdateCity(city_name){
+		document.updateCity.city_name.value=city_name;
+		document.updateCity.submit();
+	}
+
 	function productDetail(no) {
 		document.detail.no.value=no;
 		document.detail.submit();
