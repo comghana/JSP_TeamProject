@@ -174,6 +174,16 @@ drop table domesticflight;
 rename table internationalflight to flight;
 select * from flight;
 
+
+select left(stdate, 10) from flight;
+alter table flight add column stdate1 varchar(30) after flight_num;
+alter table flight modify column airline varchar(20) not null;
+alter table flight modify column airport varchar(30) not null;
+select count(stdate) from flight;
+
+
+insert into flight(stdate1) select left(stdate, 10) from flight;
+
 create table wish_list (
 	mem_id varchar(30) not null,
     flight_id int not null,
@@ -195,3 +205,5 @@ insert into recommend(city_name, file_name) values
     ('바티칸', 'vatikan.jpg'), ('베니스', 'venis.jpg');
     
 select * from recommend;
+
+

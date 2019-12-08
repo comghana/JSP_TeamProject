@@ -25,7 +25,3 @@ div {position:relative; align:center;}
 	</form>
 </body>
 </html>
-
-
-
-

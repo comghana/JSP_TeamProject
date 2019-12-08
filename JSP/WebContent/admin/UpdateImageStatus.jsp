@@ -8,17 +8,20 @@
 div {position:relative; align:center;}
 </style>
 <script language="JavaScript" src="script.js"></script>
-<%
-	String reco_name = request.getParameter("reco_name");
-	RecoBean recoBean= recoM.getRecommend(reco_name);
-%>
+
 <title>업데이트 확인</title>
 </head>
 <body>
-	<form name="reForm1" method="post" action="UpdateImageStatusProc.jsp">
+	<%
+	String reco_name = request.getParameter("reco_name");
+	RecoBean recoBean= recoM.getRecommend(reco_name);
+	%>
+	<script type="text/javascript">
+	</script>
+	<form name="reForm" method="post" action="UpdateImageStatusProc.jsp">
 	<div>
 	<h3><%=recoBean.getReco_name()%></h3>
-	<input class="btn" type="submit" value="status change">
+	<input class="btn" type="submit" value="statuschange">
 	</input>
 	<input type="hidden" name="reco_name" value="<%=reco_name%>">
 	</div>

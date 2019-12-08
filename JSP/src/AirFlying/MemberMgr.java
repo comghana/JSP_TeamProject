@@ -125,7 +125,7 @@ public class MemberMgr {
 
         try {
             con = pool.getConnection();
-            String strQuery = "select * from member where id=?";
+            String strQuery = "select * from member where id=?;";
             pstmt = con.prepareStatement(strQuery);
             pstmt.setString(1, mem_id);
             rs = pstmt.executeQuery();

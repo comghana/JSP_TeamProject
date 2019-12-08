@@ -26,15 +26,15 @@ public class RecoMgr {
 
         try {
             con = pool.getConnection();
-            String strQuery = "select * from recommend where city_name=?";
+            String strQuery = "select * from recommend where city_name=?;";
             pstmt = con.prepareStatement(strQuery);
             pstmt.setString(1, reco_name);
             rs = pstmt.executeQuery();
-
+            System.out.println(rs);
             if (rs.next()) {
                 recoBean = new RecoBean();
-                recoBean.setReco_name(rs.getString("reco_name"));
-                recoBean.setReco_file(rs.getString("reco_file"));
+                recoBean.setReco_name(rs.getString("city_name"));
+                recoBean.setReco_file(rs.getString("file_name"));
                 recoBean.setReco_status(rs.getString("status"));
                 
             }
@@ -78,15 +78,17 @@ public class RecoMgr {
     	Connection con = null;
         PreparedStatement pstmt = null;
         boolean flag = false;
-        String qu1 = "update recomment set status='out' where city_name = ?;";
-        /*String qu2 = "update recomment set status='in' where city_name = ?;";
+        String out = "out";
+        String qu1 = "update recommend set status=? where city_name = ?";
+        /*String qu2 = "update recommend set status='in' where city_name = ?;";
         String result = null;
         if(recoBean.getReco_status() == "in") result = qu1;
         else result = qu2;*/
         try {
         	con = pool.getConnection();
         	pstmt = con.prepareStatement(qu1);
-        	pstmt.setString(1, recoBean.getReco_name());
+        	pstmt.setString(1, out);
+        	pstmt.setString(2, recoBean.getReco_name());
             int count = pstmt.executeUpdate();
             if (count == 1) {
                 flag = true;

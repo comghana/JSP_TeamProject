@@ -13,23 +13,16 @@ request.setCharacterEncoding("UTF-8");
    
 %>
     
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<script>
 <%
 if(flag){%>
+	<script>
 	alert("성공적으로 수정하였습니다.");
 	location.href="Recommend.jsp";
+	</script>
 	<%}else{%>
+	<script>
 	alert("실패하였습니다. 다시 시도해주세요.");
 	location.href="Recommend.jsp";
+	</script>
 	<%}%>
-</script>
-</body>
-</html>
 
