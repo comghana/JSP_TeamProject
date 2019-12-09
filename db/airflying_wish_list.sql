@@ -25,7 +25,11 @@ DROP TABLE IF EXISTS `wish_list`;
 CREATE TABLE `wish_list` (
   `mem_id` varchar(30) NOT NULL,
   `flight_id` int(11) NOT NULL,
-  `add_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `add_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`mem_id`,`flight_id`),
+  KEY `FK4` (`flight_id`),
+  CONSTRAINT `FK3` FOREIGN KEY (`mem_id`) REFERENCES `member` (`ID`),
+  CONSTRAINT `FK4` FOREIGN KEY (`flight_id`) REFERENCES `flight` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -35,6 +39,7 @@ CREATE TABLE `wish_list` (
 
 LOCK TABLES `wish_list` WRITE;
 /*!40000 ALTER TABLE `wish_list` DISABLE KEYS */;
+INSERT INTO `wish_list` VALUES ('ji970',1,'2019-12-09 02:49:08');
 /*!40000 ALTER TABLE `wish_list` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -47,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-09 11:35:19
+-- Dump completed on 2019-12-09 11:51:41

@@ -196,6 +196,20 @@ create table wish_list (
     flight_id int not null,
     add_date TIMESTAMP DEFAULT NOW()
 );
+desc wish_list;
+
+ALTER TABLE wish_list ADD constraint FK3
+FOREIGN KEY(mem_id) 
+references member(id);
+
+ALTER TABLE wish_list ADD constraint FK4
+FOREIGN KEY(flight_id) 
+references flight(id);
+
+alter table wish_list add primary key(mem_id, flight_id);
+insert into wish_list(mem_id, flight_id) values('ji970', 1);
+select * from wish_list;
+
 
 create table city(
 	city_name varchar(20) primary key,
