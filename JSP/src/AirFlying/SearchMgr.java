@@ -26,17 +26,47 @@ public class SearchMgr {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         int depday = getDateDay(searchPara.getDepartureDate(), "yyyy-MM-dd"); //날짜 숫자변환 일요일 0 ~ 6 토요일
+        String chweek = null;
+        String tmp = "select id, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun "
+        		+ "from flight, airport_info "
+        		+ "where flight.airport = airport_info.KNAME and KNAME=? and city=? and time>? and stdate>? and eddate < ?";
+        switch(depday) {
+        case 0:
+        	chweek = tmp + " and sun = ?";
+        	break;
+        case 1:
+        	chweek = tmp + "and mon = ?";
+        	break;
+        case 2:
+        	chweek = tmp + "and tue = ?";
+        	break;
+        case 3:
+        	chweek = tmp + "and wed = ?";
+        	break;
+        case 4:
+        	chweek = tmp +  "and thu = ?";
+        	break;
+        case 5:
+        	chweek = tmp + "and fri = ?";
+        	break;
+        case 6:
+        	chweek = tmp + "and sat = ?";
+        	break;
+        }
         System.out.println();
         Vector<FlightBean> vecList = new Vector<FlightBean>();
         try {
             con = pool.getConnection();
             if(searchPara.getSearchOption().equals("oneway")) {
-	            String strQuery = "select id, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun from flight, airport_info where flight.airport = airport_info.KNAME and KNAME=? and city=? and time>? and stdate>?";
+	            String strQuery = chweek;
+	            String chk = "Y";
 	            pstmt = con.prepareStatement(strQuery);
 	            pstmt.setString(1, searchPara.departureCity);
 	            pstmt.setString(2, searchPara.arriveCity);
 	            pstmt.setString(3, searchPara.minimumTime);
 	            pstmt.setString(4, searchPara.departureDate);
+	            pstmt.setString(5, searchPara.departureDate);
+	            pstmt.setString(6, chk);
 	            rs = pstmt.executeQuery(strQuery);
 	            
 	            while (rs.next()) {

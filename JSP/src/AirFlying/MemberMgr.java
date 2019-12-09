@@ -77,7 +77,7 @@ public class MemberMgr {
         boolean flag = false;
         try {
             con = pool.getConnection();
-            String strQuery = "insert into member values(?,?,?,?,?,?,?)";
+            String strQuery = "insert(id, passwd, name, gender, phone, birth) into member values(?,?,?,?,?,?)";
             pstmt = con.prepareStatement(strQuery);
             pstmt.setString(1, regBean.getMem_id());
             pstmt.setString(2, regBean.getMem_passwd());
@@ -85,7 +85,6 @@ public class MemberMgr {
             pstmt.setString(4, regBean.getMem_gender());
             pstmt.setString(5, regBean.getMem_phone());
             pstmt.setString(6, regBean.getMem_birth());
-            pstmt.setString(7, regBean.getMem_date());
             int count = pstmt.executeUpdate();
 
             if (count == 1) {
