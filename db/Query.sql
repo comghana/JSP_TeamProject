@@ -284,3 +284,5 @@ update airline_info set file = 'panp.png' where name = '팬퍼시픽항공';
 ALTER TABLE flight ADD constraint FK5
 FOREIGN KEY(airline) 
 references airline_info(name);
+
+select * from wish_list;
