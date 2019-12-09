@@ -16,10 +16,19 @@ div {position:relative; align:center;}
 <title>수정확인</title>
 </head>
 <body>
-	<form name="reForm1" method="post" action="UpdateProc.jsp">
-	<div>
 	<h3><%=cityBean.getCity_name() %></h3>
-	<input class="btn" type="submit" value="수정">
+	</h3>상태 : <%= cityBean.getCity_io() %>
+	<form name="reForm1" method="post" action="UpdateOutProc.jsp">
+	<div>
+	<input class="btn" type="submit" value="out으로수정">
+	</input>
+	<input type="hidden" name="city_name" value="<%=city_name %>">
+	</div>
+	</form>
+	
+	<form name="reForm2" method="post" action="UpdateInProc.jsp">
+	<div>
+	<input class="btn" type="submit" value="in으로수정">
 	</input>
 	<input type="hidden" name="city_name" value="<%=city_name %>">
 	</div>

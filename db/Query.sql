@@ -212,15 +212,15 @@ select * from wish_list;
 
 
 create table city(
-	city_name varchar(20) primary key,
-    city_file varchar(20),
-    city_IO char(3) default 'out'
+	name varchar(20) primary key,
+    file varchar(20),
+    IO char(3) default 'out'
 );
 
 insert into city values('KotaKinabalu', 'kota.jpg', 'in');
 insert into city values('New York', 'newyork.jpg', 'in');
 insert into city values('Da Nang', 'danang.jpg', 'in');
-insert into city(city_name, city_file) values
+insert into city(name, file) values
 	('Bei Jing', 'bookkeong.jpg'), ('Los Angeles', 'la.jpg'), 
     ('Shang Hai', 'sanghae.jpg'), ('Chicago', 'sikago.jpg'), 
     ('Vaticanae', 'vatikan.jpg'), ('Venice', 'venis.jpg');

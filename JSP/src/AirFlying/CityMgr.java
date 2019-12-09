@@ -26,7 +26,7 @@ public class CityMgr {
 	        	con = pool.getConnection();
 	        	pstmt = con.prepareStatement("update city set io = ? where name = ?;");
 	        	pstmt.setString(1, out);
-	        	pstmt.setString(1, cityBean.getCity_name());
+	        	pstmt.setString(2, cityBean.getCity_name());
 	        	int count = pstmt.executeUpdate();
 	            if (count == 1) {
 	                flag = true;
@@ -49,7 +49,7 @@ public class CityMgr {
 	        	con = pool.getConnection();
 	        	pstmt = con.prepareStatement("update city set io = ? where name = ?;");
 	        	pstmt.setString(1, in);
-	        	pstmt.setString(1, cityBean.getCity_name());
+	        	pstmt.setString(2, cityBean.getCity_name());
 	        	int count = pstmt.executeUpdate();
 	            if (count == 1) {
 	                flag = true;
