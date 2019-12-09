@@ -1,9 +1,6 @@
 package AirFlying;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -22,35 +19,37 @@ public class SearchMgr {
     }
     
 	public Vector getFlightList(SearchBean searchPara) throws Exception {
-         Connection con = null;
+        Connection con = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         int depday = getDateDay(searchPara.getDepartureDate(), "yyyy-MM-dd"); //날짜 숫자변환 일요일 0 ~ 6 토요일
         String chweek = null;
-        String tmp = "select id, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun "
-        		+ "from flight, airport_info "
-        		+ "where flight.airport = airport_info.KNAME and KNAME=? and city=? and time>? and stdate>? and eddate < ?";
+        String io = "out";
+        String tmp = "select kname, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun"
+        		+ " from flight, airport_info"
+        		+ " where airport = ? and city = ? and time > ? and stdate < ? and eddate > ? and iotype = ?";
+        
         switch(depday) {
         case 0:
         	chweek = tmp + " and sun = ?";
         	break;
         case 1:
-        	chweek = tmp + "and mon = ?";
+        	chweek = tmp + " and mon = ?";
         	break;
         case 2:
-        	chweek = tmp + "and tue = ?";
+        	chweek = tmp + " and tue = ?";
         	break;
         case 3:
-        	chweek = tmp + "and wed = ?";
+        	chweek = tmp + " and wed = ?";
         	break;
         case 4:
-        	chweek = tmp +  "and thu = ?";
+        	chweek = tmp +  " and thu = ?";
         	break;
         case 5:
-        	chweek = tmp + "and fri = ?";
+        	chweek = tmp + " and fri = ?";
         	break;
         case 6:
-        	chweek = tmp + "and sat = ?";
+        	chweek = tmp + " and sat = ?";
         	break;
         }
         System.out.println();
@@ -58,20 +57,21 @@ public class SearchMgr {
         try {
             con = pool.getConnection();
             if(searchPara.getSearchOption().equals("oneway")) {
-	            String strQuery = chweek;
 	            String chk = "Y";
-	            pstmt = con.prepareStatement(strQuery);
+	            pstmt = con.prepareStatement(chweek + " and airport_info.KNAME=flight.airport");
 	            pstmt.setString(1, searchPara.departureCity);
 	            pstmt.setString(2, searchPara.arriveCity);
 	            pstmt.setString(3, searchPara.minimumTime);
 	            pstmt.setString(4, searchPara.departureDate);
 	            pstmt.setString(5, searchPara.departureDate);
-	            pstmt.setString(6, chk);
-	            rs = pstmt.executeQuery(strQuery);
+	            pstmt.setString(6, io);
+	            pstmt.setString(7, chk);
+	            
+	            rs = pstmt.executeQuery();
 	            
 	            while (rs.next()) {
 	                FlightBean listBean = new FlightBean();
-	                listBean.setId(rs.getString("id"));
+	                listBean.setId(rs.getString("kname"));
 	                listBean.setAirline(rs.getString("airline"));
 	                listBean.setAirport(rs.getString("airport"));
 	                listBean.setArrvCity(rs.getString("city"));
@@ -96,6 +96,8 @@ public class SearchMgr {
         }
         return vecList;
     }
+	
+	
 	public int getDateDay(String date, String dateType) throws Exception {
 
 	    int day = 0;
