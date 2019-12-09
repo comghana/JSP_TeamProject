@@ -51,14 +51,14 @@
 			<th class="g_time" align="center" style="padding-left: 40px;">4시간
 				20분</th>
 			<th class="empty"></th>
-			<th class="empty"></th>
+			<th class="trash"><img src="../img/trash.png" alt="" width=20px></th>
 		</tr>
 		<tr>
 			<td class="d_time" align="center">오전 6:15</td>
 			<td class="point"><img src="../img/line.png" alt="" width=>
 				<img src="../img/plane.png" alt="" width=25px></td>
 			<td class="a_time" align="center">오전 8:55</td>
-			<th class="trash"><img src="../img/heart.PNG" alt="" width=70px></th>
+			<th class="empty"></th>
 		</tr>
 		<tr>
 			<td class="d_city" align="center"
