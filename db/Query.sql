@@ -179,7 +179,7 @@ select * from flight;
 select count(*) from flight;
 
 
-select left(stdate, 10) from flight;
+
 
 desc flight;
 alter table flight add column id int primary key AUTO_INCREMENT first;
@@ -227,4 +227,16 @@ insert into city(city_name, city_file) values
     
 
 select * from city;
+select * from flight;
+
+
+select left(stdate, 10) from flight;
+SET SQL_SAFE_UPDATES = 0;
+
+update flight set stdate = left(stdate, 10);
+update flight set eddate = left(eddate, 10);
+alter table flight modify column stdate date not null;
+alter table flight modify column eddate date not null;
+
+alter table flight modify column time time not null;
 
