@@ -141,7 +141,7 @@ vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 �
 						<td class="point"><img src="../img/line.png" alt="">
 							<img src="../img/plane.png" alt="" width=25px></td>
 						<td class="a_time" align="center">00:00</td>
-						<th class="trash"><img src="../img/heart.PNG" alt="" width=70px></th>
+						<th class="heart"><img src="../img/heart.PNG" alt="" width=70px onclick="wishClick(<%= vc.get(i).getId()%>)"></th>
 					</tr>
 					<tr>
 						<td class="d_city" align="center"style="font-weight:bold; padding-bottom:25px;">
@@ -157,5 +157,16 @@ vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 �
 <%}%>
 </div>
 </body>
-
+	<script>
+	function wishClick(id){
+		<%
+			if(session.getAttribute("loginSession") != null){
+		%>
+		 window.location.replace("AddWishMgr.jsp?id="+id);
+		<% }else{ %>
+		alert("로그인을 해주세요.");
+		window.location.replace("Main_Index.jsp");
+		<% } %>
+	}
+	</script>
 </html>
