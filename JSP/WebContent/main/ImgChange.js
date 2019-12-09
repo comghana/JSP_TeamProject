@@ -1,3 +1,5 @@
+/*작성자: 장지은*/
+
 var index=1;
 
 show(index);

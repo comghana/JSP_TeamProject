@@ -1,6 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%-- 
 
+	작성자: 장지은
+	파일 이름: MemberMgr.jsp
+	목적: 관리할 고객 목록을 보여주는 페이지
+
+ --%>
 <%@ page import="java.util.*, AirFlying.*"%>
 <jsp:useBean id="memMgr" class="AirFlying.MemberMgr" />
 <html>

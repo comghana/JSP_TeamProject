@@ -45,6 +45,14 @@ public class ParsingFlightScheduleListInternational {
        		str += sb.toString();
        	}
 		System.out.println("finish load");
+		
+		
+			/*
+	        * 작성자: 장지은
+	        * 파일 이름: ParsingFlightScheduleListDomestic.java
+	        * 목적: API에서 받은 데이터를 가공하여 데이터베이스에 저장
+	        */
+		
 		//필요한 데이터를 얻어오기
 		System.out.println("start token");
 		final String []token = {"<airlineKorean>", "<airport>", "<city>", "<internationalEddate>",

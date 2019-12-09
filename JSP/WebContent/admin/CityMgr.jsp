@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%-- 
 
+	작성자: 장지은
+	파일 이름: CityMgr.jsp
+	목적: 관리할 추천도시 목록을 보여주는 페이지
+
+ --%>
 <%@ page import="java.util.*, AirFlying.*"%>
 <jsp:useBean id="cityMgr" class="AirFlying.CityMgr" />
 <!DOCTYPE html>

@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- 
+
+	작성자: 장지은
+	파일 이름: DeleteMem.jsp
+	목적: 해당 아이디를 보여주고 탈퇴 버튼을 누르면 탈퇴를 처리하는 페이지로 넘어간다
+
+ --%>
 <%@ page import="java.util.*, AirFlying.*" %>
 <jsp:useBean id="memMgr" class="AirFlying.MemberMgr" />
 <html>

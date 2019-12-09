@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%-- 
 
+	작성자: 장지은
+	파일 이름: Index.jsp
+	목적: 관지자 페이지의 메인
+
+ --%>
 <!DOCTYPE html>
 <html>
   <head>

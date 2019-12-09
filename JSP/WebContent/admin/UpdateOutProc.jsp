@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%-- 
+
+	작성자: 장지은
+	파일 이름: UpdateOutProc.jsp
+	목적: 상태를 처리하기 위한 페이지
+
+ --%>
 <%
 request.setCharacterEncoding("UTF-8");
 %>

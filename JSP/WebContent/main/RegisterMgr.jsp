@@ -16,7 +16,7 @@
 		%>
 		<script>
 		alert("회원가입이 완료되었습니다.");
-		history.back();
+		location.href="Main_Index.jsp";
 		</script>
 		<%
 	}else{

@@ -1,6 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+    <%-- 
+
+	작성자: 장지은
+	파일 이름: DeleteProc.jsp
+	목적: 탈퇴시킬 멤버의 아이디를 보내 처리한 결과를 보여준다.
+
+ --%>
 <% 
 request.setCharacterEncoding("UTF-8");
 %>

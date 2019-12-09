@@ -78,6 +78,13 @@ body {
 }
 </style>
 <jsp:useBean id="wishLoad" class="AirFlying.WishMgr" />
+   <%-- 
+
+	작성자: 장지은
+	파일 이름: UpdateInProc.jsp의 일부분
+	목적: wish리스트 값 가져오기
+
+ --%>
 <%
 
 Vector <WishBean> vc = new Vector<WishBean>();

@@ -39,6 +39,13 @@ public class ParsingAirport {
             str += sb.toString();
         }
        
+       /*
+        * 작성자: 장지은
+        * 파일 이름: ParsingAirport.java
+        * 목적: API에서 받은 데이터를 가공하여 데이터베이스에 저장
+        */
+
+       
        // 여기부터 필요한 데이터를 얻어오는 곳
        final String []token = { "<cityCode>", "<cityEng>", "<cityKor>" };
        String[] parse = null;

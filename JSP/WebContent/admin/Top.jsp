@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- 
+
+	작성자: 장지은
+	파일 이름: Top.jsp
+	목적: 모듈화-상단 부분 페이지
+
+ --%>
   <%
     String admin_id = (String)session.getAttribute("adminKey");
 

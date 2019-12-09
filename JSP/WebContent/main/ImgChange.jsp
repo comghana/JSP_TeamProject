@@ -2,7 +2,13 @@
 	pageEncoding="UTF-8"%>
 	<%@ page import="java.util.*, AirFlying.*"%>
 	<jsp:useBean id="cityMgr" class="AirFlying.CityMgr" />
+ <%-- 
 
+	작성자: 장지은
+	파일 이름: ImgChange.jsp
+	목적: 모듈화-추천메뉴 추천상태가 'in'인 도시를 자동으로 넘기기
+
+ --%>
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <style>

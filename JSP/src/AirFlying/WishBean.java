@@ -1,4 +1,9 @@
 package AirFlying;
+/*
+ * 작성자: 장지은
+ * 파일 이름: WishBean.java
+ * 목적: 위시리스트 Bean
+ */
 
 public class WishBean {
 	private String mem_id = null;

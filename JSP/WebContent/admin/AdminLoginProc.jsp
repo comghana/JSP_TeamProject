@@ -1,5 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <jsp:useBean id="adset" class="AirFlying.AdminSet" /> <%-- 중요 --%>
+
+<%-- 
+
+	작성자: 장지은
+	파일 이름: AdminLoginProc.jsp
+	목적: 로그인을 처리하기 위한_jsp
+
+ --%>
+ 
 <%
 	String admin_id = request.getParameter("admin_id");
 	String admin_passwd = request.getParameter("admin_passwd");
