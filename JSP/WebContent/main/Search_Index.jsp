@@ -80,32 +80,35 @@ body {
 		Vector <FlightBean> vc = new Vector<FlightBean>();
 		vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 경고.
 		
-		for(int i = 0; i < /* vc.size() */ 10; i++) { //임시 테스트  => int 형의 숫자 넣기.
+		for(int i = 0; i < vc.size(); i++) { //임시 테스트  => int 형의 숫자 넣기.
+			String depTime = vc.get(i).getDeptime();
 		%>
 				<table class="tg" style="margin-top: 10px; margin-left: 28%">
 					<tr>
 						<th class="pic" colspan="2" rowspan="3"><img
 							src="../img/vietjet.PNG" alt="" style="" width="100px"></th>
 						<th class="empty"></th>
-						<th class="g_time" align="center" style="padding-left: 40px;">4시간
-							20분</th>
+						<th class="g_time" align="center" style="padding-left: 40px;">0시간
+							0분</th>
 						<th class="empty"></th>
 						<th class="empty"></th>
 					</tr>
 					<tr>
-						<td class="d_time" align="center">오전 6:15</td>
+						<td class="d_time" align="center">
+						<%= depTime.substring(0,2) %>:<%= depTime.substring(2) %>
+						</td>
 						<td class="point"><img src="../img/line.png" alt="" width=>
 							<img src="../img/plane.png" alt="" width=25px></td>
-						<td class="a_time" align="center">오전 8:55</td>
+						<td class="a_time" align="center">00:00</td>
 						<th class="trash"><img src="../img/heart.PNG" alt="" width=70px></th>
 					</tr>
 					<tr>
 						<td class="d_city" align="center"
-							style="font-weight: bold; padding-bottom: 25px;">ICN</td>
+							style="font-weight: bold; padding-bottom: 25px;"><%= vc.get(i).getAirport() %></td>
 						<td class="how" align="center"
 							style="color: #00A698; font-weight: bold; padding-right: 20px;">직항</td>
 						<td class="a_city" align="center"
-							style="font-weight: bold; padding-bottom: 25px;">DAD</td>
+							style="font-weight: bold; padding-bottom: 25px;"><%= vc.get(i).getArrvCity() %></td>
 						<th class="empty"></th>
 					</tr>
 				</table>
