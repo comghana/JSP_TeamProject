@@ -240,3 +240,47 @@ alter table flight modify column eddate date not null;
 
 alter table flight modify column time time not null;
 
+select count(distinct airline) from flight;
+
+create table airline_info (
+	name varchar(20) primary key,
+    file varchar(15) default 'noairline.jpg'
+);
+
+insert ignore into airline_info(name) select distinct airline from flight;
+select * from airline_info;
+
+
+update airline_info set file = 'airbusan.png' where name = '에어부산';
+update airline_info set file = 'airseoul.png' where name = '에어서울';
+update airline_info set file = 'ana.png' where name = '전일본항공';
+update airline_info set file = 'asiana.png' where name = '아시아나항공';
+update airline_info set file = 'cebupacific.png' where name = '세부퍼시픽항공';
+update airline_info set file = 'delta.png' where name = '델타항공';
+update airline_info set file = 'dragonair.png' where name = '케세이드래곤항공';
+update airline_info set file = 'estarjet.png' where name = '이스타항공';
+update airline_info set file = 'evaair.png' where name = '에바항공(장영항공)';
+update airline_info set file = 'jejuair.png' where name = '제주항공';
+update airline_info set file = 'jinair.png' where name = '진에어';
+update airline_info set file = 'koreanair.png' where name = '대한항공';
+update airline_info set file = 'lufthansa.png' where name = '루프트한자항공(독일항공)';
+update airline_info set file = 'lufthansa.png' where name = '루프트한자화물항공(독일화물항공)';
+update airline_info set file = 'nwa.png' where name = '노스웨스트항공';
+update airline_info set file = 'philippine.png' where name = '필리핀항공';
+update airline_info set file = 'singapore.png' where name = '싱가폴항공';
+update airline_info set file = 'tway.png' where name = '티웨이항공';
+update airline_info set file = 'vietjet.png' where name = '비엣젯항공';
+update airline_info set file = 'vietnam.png' where name = '베트남항공';
+update airline_info set file = 'lao.png' where name = '라오항공';
+update airline_info set file = 'mongol.png' where name = '몽골항공';
+update airline_info set file = 'sacheon.png' where name = '사천항공';
+update airline_info set file = 'sandong.png' where name = '산동항공';
+update airline_info set file = 'shanghai.png' where name = '상해항공';
+update airline_info set file = 'thai.png' where name = '타이항공';
+update airline_info set file = 'hke.png' where name = '홍콩익스프레스';
+update airline_info set file = 'peach.png' where name = '피치항공';
+update airline_info set file = 'panp.png' where name = '팬퍼시픽항공';
+
+ALTER TABLE flight ADD constraint FK5
+FOREIGN KEY(airline) 
+references airline_info(name);
