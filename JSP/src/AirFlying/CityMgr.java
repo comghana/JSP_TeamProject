@@ -134,7 +134,7 @@ public class CityMgr {
 	            String strQuery = "select * from city where io = ?";
 	            pstmt = con.prepareStatement(strQuery);
 	            pstmt.setString(1, in);
-	            rs = pstmt.executeQuery(strQuery);
+	            rs = pstmt.executeQuery();
 
 	            while (rs.next()) {
 	                CityBean cityBean = new CityBean();
