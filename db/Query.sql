@@ -289,4 +289,6 @@ select * from wish_list;
 insert into wish_list values ('ji970', 18054, '2019-12-07');
 insert into wish_list values ('ji970', 18219, now());
 
+select* from member;
 
+select * from city where io = 'in';

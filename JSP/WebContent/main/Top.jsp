@@ -24,7 +24,7 @@ li>a {
 			<div id="header_nav" style="margin-right: 200px">
 		<ul style="font-weight:bold;font-size:20px;">
 			<a href="Wish_Index.jsp"><img src="../img/wishlist.PNG" style="width: 118px; height: 40px"></a>
-			<img src="../img/user.PNG" width="29px" height="25px">
+			<img src="../img/userlogo.PNG" width="29px" height="25px">
 			<%= session.getAttribute("loginSession") %>님, 어서오세요 &nbsp&nbsp
 			<input data-toggle="modal" type="button" class="btn btn-default" onclick="location.href='LogoutMgr.jsp'" style="background-color:#5E5E5E;color:#FFFFFF;
                 font-size:16px;padding-left:20px;padding-right:20px;padding-top:8px;padding-bottom:8px;" value="LOGOUT">

@@ -122,4 +122,34 @@ public class CityMgr {
 	        return vecList;
 	    }
 	    
+	    
+	    public Vector getInCityList() {
+	    	Connection con = null;
+	        ResultSet rs = null;
+	        PreparedStatement pstmt = null;
+	        Vector vecList = new Vector();
+	        try {
+	            con = pool.getConnection();
+	            String in = "in";
+	            String strQuery = "select * from city where io = ?";
+	            pstmt = con.prepareStatement(strQuery);
+	            pstmt.setString(1, in);
+	            rs = pstmt.executeQuery(strQuery);
+
+	            while (rs.next()) {
+	                CityBean cityBean = new CityBean();
+	                cityBean.setCity_name(rs.getString("name"));
+	                cityBean.setCity_file(rs.getString("file"));
+	                cityBean.setCity_io(rs.getString("io"));
+	                vecList.add(cityBean);
+	            }
+	        } catch (Exception ex) {
+	            System.out.println("Exception" + ex);
+	        } finally {
+	            pool.freeConnection(con, pstmt, rs);
+	        }
+	        return vecList;
+	    }
+	    
+	    
 }
