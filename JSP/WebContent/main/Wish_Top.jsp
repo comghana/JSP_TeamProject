@@ -3,6 +3,16 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <meta charset="UTF-8">
+<%
+if(session.getAttribute("loginSession") == null){
+	%>
+	<script>
+	alert("비정상적인 접근입니다.");
+	history.back();
+	</script>
+	<%
+}
+%>
 <div
 	style="position: absolute; width: 1197px; height: 86px; background-color: #042759; margin-top: 15px;">
 	<span class="glyphicon glyphicon-home" aria-hidden="true"
