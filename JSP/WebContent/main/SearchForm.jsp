@@ -77,7 +77,7 @@ body {
 	<p class="arrv_dep_font" style="top: 310px; left: 623px">가는날</p>
 	<p class="arrv_dep_font" style="top: 310px; left: 750px">오는날</p>
 	<p class="arrv_dep_font" style="top: 310px; left: 878px">최소 시간</p>
-	<form action="" method="post">
+	<form action="SearchMgr.jsp" method="post">
 		<p class="radio">
 			<input id="roundway" class="radioSize" type="radio" name="radioOp"
 				value="round" checked> 왕복 &nbsp &nbsp <input id="oneway"
@@ -106,9 +106,9 @@ body {
 			class="selectbox" name="minimumtime"
 			style="top: 342px; left: 878px; width: 120px">
 			<%
-		for (int i = 1; i <= 24; i++) {
+		for (int i = 0; i <= 23; i++) {
 		%>
-			<option value=<%=i%>>
+			<option value=<%=i%>00>
 				<%=i%>시 00분
 			</option>
 			<%
@@ -137,7 +137,8 @@ body {
 		$('#depText').removeAttr("disabled");
 		$('#arvText').removeAttr("disabled");
 		$('#arvText').removeAttr("disabled");
-		$('#arvdate').attr("disabled", true);
+		$('#flightnv').attr("disabled", true);
+		$('#arrvdate').attr("disabled", true);
 	});
 
 	$('#flightnvOp').click(function() {

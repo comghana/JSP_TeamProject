@@ -3,6 +3,7 @@
     <%@ page import="java.util.*, AirFlying.*"%>
 <jsp:useBean id="airportLoad" class="AirFlying.SearchMgr" />
 <%
+	request.setCharacterEncoding("utf-8");
 	SearchBean searchPara = new SearchBean();
 	searchPara.setSearchOption(request.getParameter("radioOp"));
 	searchPara.setFlightNumber(request.getParameter("flightnv"));
@@ -11,7 +12,7 @@
 	searchPara.setDepartureDate(request.getParameter("depdate"));
 	searchPara.setReturnDate(request.getParameter("arrvdate"));
 	searchPara.setMinimumTime(request.getParameter("minimumtime"));
-	Vector vc = new Vector<>();
+	Vector <FlightBean> vc = new Vector<FlightBean>();
 	vc = airportLoad.getFlightList(searchPara);
-	
+	System.out.print(vc);
 %>

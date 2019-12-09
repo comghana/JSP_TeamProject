@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.Vector;
 
 public class SearchMgr {
@@ -26,11 +27,12 @@ public class SearchMgr {
         try {
             con = pool.getConnection();
             if(searchPara.getSearchOption().equals("oneway")) {
-	            String strQuery = "select id, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun from flight, airport_info where flight.airport = airport_info.KNAME and KNAME=?";// TODO: SQL 구문 수정
+	            String strQuery = "select id, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun from flight, airport_info where flight.airport = airport_info.KNAME and KNAME=? and city=? and time > ? and stdate > ?";
 	            pstmt = con.prepareStatement(strQuery);
 	            pstmt.setString(1, searchPara.departureCity);
-	            pstmt.setString(2, searchPara.minimumTime);
-	            pstmt.setString(3, searchPara.departureDate);
+	            pstmt.setString(2, searchPara.arriveCity);
+	            pstmt.setString(3, searchPara.minimumTime);
+	        //    pstmt.setString(4, searchPara.departureDate);
 	            rs = pstmt.executeQuery();
 	            while (rs.next()) {
 	                FlightBean listBean = new FlightBean();
