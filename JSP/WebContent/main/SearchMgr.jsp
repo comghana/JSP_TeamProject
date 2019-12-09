@@ -14,5 +14,6 @@
 	searchPara.setMinimumTime(request.getParameter("minimumtime"));
 	Vector <FlightBean> vc = new Vector<FlightBean>();
 	vc = airportLoad.getFlightList(searchPara);
-	System.out.print(vc);
+	request.setAttribute("flightListResult", vc);
 %>
+<jsp:forward page = "Search_Index.jsp"/>;
