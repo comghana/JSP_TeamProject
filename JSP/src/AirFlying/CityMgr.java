@@ -5,6 +5,12 @@ import java.util.Vector;
 
 import AirFlying.CityBean;
 
+/*
+ * 작성자: 장지은
+ * 파일 이름: CityMgr.java
+ * 목적: 추천 도시 update, insert하기 위한 파일
+ */
+
 public class CityMgr {
 	 private DBConnectionMgr pool = null;
 

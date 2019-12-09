@@ -1,4 +1,9 @@
 package AirFlying;
+/*
+ * 작성자: 장지은
+ * 파일 이름: RegisterBean.java
+ * 목적: member 테이블 Bean 파일
+ */
 
 public class RegisterBean {
 

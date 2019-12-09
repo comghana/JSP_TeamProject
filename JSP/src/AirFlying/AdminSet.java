@@ -2,6 +2,12 @@ package AirFlying;
 
 import java.sql.*;
 
+/*
+ * 작성자: 장지은
+ * 파일 이름: AdminSet.java
+ * 목적: 관리자 로그인 확인
+ */
+
 public class AdminSet {
 	private DBConnectionMgr pool = null;
 

@@ -5,7 +5,11 @@ import java.util.Vector;
 
 import AirFlying.RegisterBean;
 
-
+/*
+ * 작성자: 장지은
+ * 파일 이름: MemberMgr.java
+ * 목적: member 정보를 얻고, 수정하는 파일
+ */
 public class MemberMgr {
 
     private DBConnectionMgr pool = null;

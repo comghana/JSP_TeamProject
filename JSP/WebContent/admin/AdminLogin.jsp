@@ -1,4 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%-- 
+
+	작성자: 장지은
+	파일 이름: RegisterBean.java
+	목적: member 테이블 Bean 파일
+
+ --%>
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,7 +16,7 @@
     <form method="post" action="AdminLoginProc.jsp">
     <table align="center">
         <tr>
-            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  ID  &nbsp&nbsp</th>
+            <th style="align-text=center;">ID</th>
             <td><input type="text" name="admin_id"
               style="width:200px;height:30px;">
             </td>

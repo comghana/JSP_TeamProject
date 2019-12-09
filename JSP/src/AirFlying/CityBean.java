@@ -1,5 +1,11 @@
 package AirFlying;
 
+/*
+ * 작성자: 장지은
+ * 파일 이름: CityBean.java
+ * 목적: 추천 도시 관련 Bean파일
+ */
+
 public class CityBean {
 	private String city_name;
 	private String city_file;
