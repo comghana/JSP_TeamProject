@@ -1,17 +1,17 @@
 package AirFlying;
 
 public class SearchBean {
-	int searchOption;
+	String searchOption;
 	String flightNumber;
 	String departureCity;
 	String arriveCity;
 	String departureDate;
 	String returnDate;
 	String minimumTime;
-	public int getSearchOption() {
+	public String getSearchOption() {
 		return searchOption;
 	}
-	public void setSearchOption(int searchOption) {
+	public void setSearchOption(String searchOption) {
 		this.searchOption = searchOption;
 	}
 	public String getFlightNumber() {
