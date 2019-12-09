@@ -13,8 +13,8 @@
 	searchPara.setReturnDate(request.getParameter("arrvdate"));
 	searchPara.setMinimumTime(request.getParameter("minimumtime"));
 	Vector <FlightBean> vc = new Vector<FlightBean>();
-	// vc = airportLoad.getFlightList(searchPara);
-	FlightBean listBean = new FlightBean();
+	vc = airportLoad.getFlightList(searchPara);
+	/* FlightBean listBean = new FlightBean(); //테스트 코드 
     listBean.setId("1");
     listBean.setAirline("ASIANA");
     listBean.setAirport("ICN");
@@ -23,7 +23,7 @@
     listBean.setStdate("2014-12-15");
     listBean.setEddate("2015-02-15");
     listBean.setDeptime("1512");
-    vc.add(listBean);
+    vc.add(listBean); */
 	request.setAttribute("flightListResult", vc);
 %>
 <jsp:forward page = "Search_Index.jsp"/>;
