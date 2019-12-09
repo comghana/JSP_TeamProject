@@ -24,28 +24,33 @@ public class WishMgr {
 	}
 	
 	//위시리스트 출력 얻기
-	public Vector getWishList() {
+	public Vector getWishList(String mem_id) {
 		Connection con = null;
-        Statement stmt = null;
         ResultSet rs = null;
+        PreparedStatement pstmt = null;
         Vector vecList = new Vector();
         try {
             con = pool.getConnection();
-            String strQuery = "select * from wish_list";
-            stmt = con.createStatement();
-            rs = stmt.executeQuery(strQuery);
+            String strQuery = "select wish_list.*, flight.airport, "
+            		+ "flight.city, flight.time from wish_list, flight where mem_id = ? and wish_list.flight_id=flight.id";
+            pstmt = con.prepareStatement(strQuery);
+            pstmt.setString(1, mem_id);
+            rs = pstmt.executeQuery();
 
             while (rs.next()) {
                 WishBean wishBean = new WishBean();
                 wishBean.setMem_id(rs.getString("mem_id"));
                 wishBean.setFlight_id(rs.getString("flight_id"));
                 wishBean.setAdd_date(rs.getString("add_date"));
+                wishBean.setAirport(rs.getString("airport"));
+                wishBean.setCity(rs.getString("city"));
+                wishBean.setTime(rs.getString("time"));
                 vecList.add(wishBean);
             }
         } catch (Exception ex) {
             System.out.println("Exception" + ex);
         } finally {
-            pool.freeConnection(con, stmt, rs);
+            pool.freeConnection(con, pstmt, rs);
         }
         return vecList;
 	}

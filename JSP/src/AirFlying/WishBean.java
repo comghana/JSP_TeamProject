@@ -4,6 +4,9 @@ public class WishBean {
 	private String mem_id = null;
 	private String flight_id = null;
 	private String add_date = null;
+	private String airport = null;
+	private String city = null;
+	private String time = null;
 	
 	public String getMem_id() {
 		return mem_id;
@@ -22,6 +25,24 @@ public class WishBean {
 	}
 	public void setAdd_date(String add_date) {
 		this.add_date = add_date;
+	}
+	public String getAirport() {
+		return airport;
+	}
+	public void setAirport(String airport) {
+		this.airport = airport;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
 	}
 	
 }
