@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 	<%@ page import="java.util.*, AirFlying.*"%>
 <jsp:useBean id="airportLoad" class="AirFlying.AirportLoadMgr" />
-<% Vector<SearchLoadBean> vc = airportLoad.loadData(); %>
+<% Vector<PreSearchLoadBean> vc = airportLoad.loadData(); %>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>

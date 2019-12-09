@@ -1,6 +1,6 @@
 package AirFlying;
 
-public class SearchLoadBean {
+public class PreSearchLoadBean {
 	String portCode;
 	String eName;
 	String kName;

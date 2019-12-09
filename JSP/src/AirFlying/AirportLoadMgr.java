@@ -17,8 +17,8 @@ public class AirportLoadMgr {
         }
     }
 
-    public Vector<SearchLoadBean> loadData() {
-    	Vector<SearchLoadBean> vc = new Vector<SearchLoadBean>();
+    public Vector<PreSearchLoadBean> loadData() {
+    	Vector<PreSearchLoadBean> vc = new Vector<PreSearchLoadBean>();
     	 Connection con = null;
          PreparedStatement pstmt = null;
          ResultSet rs = null;
@@ -28,7 +28,7 @@ public class AirportLoadMgr {
              pstmt = con.prepareStatement(strQuery);
              rs = pstmt.executeQuery();
              while (rs.next()) {
-                 SearchLoadBean loadSet = new SearchLoadBean();
+                 PreSearchLoadBean loadSet = new PreSearchLoadBean();
                  loadSet.setPortCode(rs.getString("port_code"));
                  loadSet.seteName(rs.getString("ename"));
                  loadSet.setkName(rs.getString("kname"));

@@ -2,12 +2,6 @@ package AirFlying;
 
 public class FlightBean {
 	private String id;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
 	private String airline;
 	private String airport;
 	private String arrvCity;
@@ -15,6 +9,12 @@ public class FlightBean {
 	private String stdate;
 	private String eddate;
 	private String deptime;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getArrvCity() {
 		return arrvCity;
 	}
