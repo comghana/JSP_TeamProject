@@ -136,8 +136,8 @@ body {
 	$('#oneway').click(function() {
 		$('#depText').removeAttr("disabled");
 		$('#arvText').removeAttr("disabled");
-		$('#arrvdate').removeAttr("disabled");
-		$('#arvText').attr("disabled", true);
+		$('#arvText').removeAttr("disabled");
+		$('#arvdate').attr("disabled", true);
 	});
 
 	$('#flightnvOp').click(function() {

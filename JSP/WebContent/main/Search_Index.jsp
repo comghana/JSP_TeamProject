@@ -30,10 +30,10 @@ body {
 <body>
 	<div id="webView">
 		<header>
-			<jsp:include page="Wish_Res_Top.jsp" flush="false" />
+			<jsp:include page="Search_Top.jsp" flush="false" />
 		</header>
 		<div style="margin-top: 10%;margin-left:25%;z-index: 10">
-			<jsp:include page="WishResBadge.jsp" flush="false" />
+			<jsp:include page="SearchBadge.jsp" flush="false" />
 		</div>
 
 	</div>
