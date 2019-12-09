@@ -79,14 +79,13 @@ body {
 	<p class="arrv_dep_font" style="top: 310px; left: 878px">최소 시간</p>
 	<form action="SearchMgr.jsp" method="post">
 		<p class="radio">
-			<input id="roundway" class="radioSize" type="radio" name="radioOp"
-				value="round" checked> 왕복 &nbsp &nbsp <input id="oneway"
-				class="radioSize" type="radio" name="radioOp" value="oneway">
+			<input id="oneway"
+				class="radioSize" type="radio" name="radioOp" value="oneway" checked>
 			편도 &nbsp &nbsp <input class="radioSize" type="radio" id="flightnvOp"
 				name="radioOp" value="flightnv"> 운행편명
 		</p>
 		<input disabled type="text" id="flightnv" name="flightnv"
-			style="top: 255px; position: absolute; left: 400px; width: 130px; height: 30px;">
+			style="top: 255px; position: absolute; left: 380px; width: 130px; height: 30px;">
 
 		<input type="submit"
 			style="position: absolute; color: white; border: 0; outline: 0; background-color: #00a698; width: 171px; height: 45px; font-weight: bold; font-size: 18px; border-radius: 6px; top: 405px; left: 893.5px"

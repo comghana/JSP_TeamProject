@@ -19,5 +19,4 @@
     		border: none;
     		border-radius:5px;"
     		onclick="location.href='LogoutMgr.jsp' ">LOGOUT</button></span>
-		
 </div>
