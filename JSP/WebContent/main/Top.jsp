@@ -110,8 +110,8 @@ li>a {
 							<td><select name="sex" class="form-control"
 								style="width: 200px;" id="gender">
 									<option value="notselect">-- 선택 --</option>
-									<option value="mr">남자</option>
-									<option value="ms">여자</option>
+									<option value="M">남자</option>
+									<option value="F">여자</option>
 							</select></td>
 						</tr>
 

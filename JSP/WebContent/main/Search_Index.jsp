@@ -85,7 +85,7 @@ body {
 				<table class="tg" style="margin-top: 10px; margin-left: 28%">
 					<tr>
 						<th class="pic" colspan="2" rowspan="3"><img
-							src="../img/vietjet.PNG" alt="" stlye="" width="100px"></th>
+							src="../img/vietjet.PNG" alt="" style="" width="100px"></th>
 						<th class="empty"></th>
 						<th class="g_time" align="center" style="padding-left: 40px;">4시간
 							20분</th>
@@ -112,6 +112,5 @@ body {
 
 <%}%>
 </div>
-
 </body>
 </html>

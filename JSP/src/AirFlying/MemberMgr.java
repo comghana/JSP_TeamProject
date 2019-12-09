@@ -1,6 +1,7 @@
 package AirFlying;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.Vector;
 
 import AirFlying.RegisterBean;
@@ -75,9 +76,11 @@ public class MemberMgr {
         Connection con = null;
         PreparedStatement pstmt = null;
         boolean flag = false;
+        SimpleDateFormat timeFormat = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
+        java.util.Date time = new java.util.Date();
         try {
             con = pool.getConnection();
-            String strQuery = "insert(id, passwd, name, gender, phone, birth) into member values(?,?,?,?,?,?)";
+            String strQuery = "insert into member values(?,?,?,?,?,?,?)";
             pstmt = con.prepareStatement(strQuery);
             pstmt.setString(1, regBean.getMem_id());
             pstmt.setString(2, regBean.getMem_passwd());
@@ -85,6 +88,7 @@ public class MemberMgr {
             pstmt.setString(4, regBean.getMem_gender());
             pstmt.setString(5, regBean.getMem_phone());
             pstmt.setString(6, regBean.getMem_birth());
+            pstmt.setString(7, timeFormat.format(time));
             int count = pstmt.executeUpdate();
 
             if (count == 1) {
