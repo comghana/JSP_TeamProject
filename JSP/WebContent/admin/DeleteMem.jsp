@@ -3,6 +3,7 @@
 <%@ page import="java.util.*, AirFlying.*" %>
 <jsp:useBean id="memMgr" class="AirFlying.MemberMgr" />
 <html>
+<head>
 <style>
 .btn {background-color:#042759;font-weight:bold;color:#FFFFFF;border: none;border-radius:5px;}
 div {position:relative; align:center;}

@@ -1,10 +1,9 @@
 package AirFlying;
 
 public class CityBean {
-
-    private String city_name;
-    private String city_file;
-    private String city_io;
+	private String city_name;
+	private String city_file;
+	private String city_io;
 	public String getCity_name() {
 		return city_name;
 	}
@@ -23,5 +22,5 @@ public class CityBean {
 	public void setCity_io(String city_io) {
 		this.city_io = city_io;
 	}
+	
 }
-

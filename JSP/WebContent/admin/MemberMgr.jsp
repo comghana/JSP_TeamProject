@@ -20,8 +20,6 @@
   <br><br>
   <%Vector vResult= memMgr.getMemberList();%>
   <div style="width:94%;text-align:center;">
-  <div style="width:35%;height:235px; over
-  flow-y:scroll;display:inline-block;">
   <table align="center">
     <th class="th1">아이디</th>
     <th class="th1">이름</th>
@@ -47,7 +45,6 @@
     </tr>
     <%}%>
   </table>
-  </div>
   </div>
  	<%@ include file="Bottom.jsp" %>
    <form name="deleteMem" method="post" action="DeleteMem.jsp">

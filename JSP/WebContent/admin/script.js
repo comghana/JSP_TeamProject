@@ -4,11 +4,11 @@
 		document.deleteMem.submit();
 	}
 	
-	function UpdateCity(city_name){
+	function UpdateCity(city_name) {
 		document.updateCity.city_name.value=city_name;
 		document.updateCity.submit();
 	}
-
+	
 	function productDetail(no) {
 		document.detail.no.value=no;
 		document.detail.submit();
