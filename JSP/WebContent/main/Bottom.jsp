@@ -22,9 +22,9 @@
 	<div id="eb">
 <div id="footer_nav" style="margin-top: 80px;">
 	<ul>
-		<a href="sorry.jsp"><li>회사 소개</li></a>
-		<a href="sorry.jsp"><li>제휴</li></a>
-		<a href="privacy.html"><li>개인정보 보호 정책</li></a>
+		<a href="Sorry.jsp"><li>회사 소개</li></a>
+		<a href="Sorry.jsp"><li>제휴</li></a>
+		<a href="Sorry.jsp"><li>개인정보 보호 정책</li></a>
 		<p id='abc'>
 			<b>&nbsp ⓒ Copyright </b> <b id='ab'> &nbsp Airflying.com</b>
 		</p>

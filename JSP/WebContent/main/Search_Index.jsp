@@ -156,7 +156,9 @@ vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 �
 				</table>
 <%}%>
 </div>
+
 </body>
+
 	<script>
 	function wishClick(id){
 		<%

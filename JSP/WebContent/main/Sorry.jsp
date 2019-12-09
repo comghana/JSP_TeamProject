@@ -39,13 +39,17 @@ body {
               <img id = "sry" src="../img/sorry.png" alt="sorry" style="width:600px"><br>
               <br>
         <button type="button" class="btn btn-secondary" id = "aa" style="background-color: #585858;margin-left:400px;color:#FFFFFF;"
-        onclick="location.href='index.jsp'" >&nbsp&nbsp&nbsp이전&nbsp&nbsp&nbsp</button>
+        onclick="goBack()" >&nbsp&nbsp&nbsp이전&nbsp&nbsp&nbsp</button>
           </article>
         </section>
         <br><br>
       </div>
 			<jsp:include page="Bottom.jsp" flush="false" />
-		</footer>
+	<script type="text/javascript">
+	function goBack() {
+	    window.history.back();
+	}
+	</script>
 	</div>
 </body>
 </html>

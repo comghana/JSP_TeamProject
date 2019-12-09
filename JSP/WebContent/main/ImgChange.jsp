@@ -34,7 +34,8 @@ bottom:5px;
   cursor:pointer;
 }
 
-.next{right:0px;}
+.next{right:0px;
+	padding-right:20px;}
 
 .pre:hover, .next:hover{
   background:#342c2c;
@@ -80,7 +81,7 @@ bottom:5px;
     %>
     <div class="slidesFade">
     <div><img src="../img/<%=cityBean.getCity_file() %>"></div>
-    <div style="text-align:center;"><p><%=cityBean.getCity_name() %></p></div>
+    <div style="text-align:center; font-size:25px;"><p><%=cityBean.getCity_name() %></p></div>
     </div>
     <%} %>
     <a class="pre" onclick="moving(-1);">&#10094;</a>
