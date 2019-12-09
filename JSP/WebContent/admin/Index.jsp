@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <%
-    String admin_id = (String)session.getAttribute("adminKey");
 
-	if(admin_id == null) {
-		response.sendRedirect("AdminLogin.jsp");
-	}
-%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,13 +8,13 @@
     <title>Air Flying Admin</title>
   </head>
   <body>
-  <%@ include file="Top.jsp" %>
+    <%@ include file="Top.jsp" %>
     <table align="center" style="margin-top:300px;">
         	<tr>
         	<form name="" method="post" action="MemberMgr.jsp">
           	  <td><button type="submit" style="border: none; "><img src="../img/member.png"></button></td>
           	 </form>
-			<form name="" method="post" action="Recommend.jsp">
+			<form name="" method="post" action="CityMgr.jsp">
           	  <td><button type="submit" style="border: none; padding-left: 10px;"><img src="../img/pic.png"></button></td>
           	</form>
        	 </tr>

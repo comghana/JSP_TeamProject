@@ -24,7 +24,7 @@ if(flag){%>
 	alert("성공적으로 탈퇴시켰습니다.");
 	location.href="MemberMgr.jsp";
 	<%}else{%>
-	alert("실패하였습니다. 다시 시도해주세요.");
+	alert("위시리스트가 있는 고객입니다.삭제가 불가능합니다.");
 	location.href="MemberMgr.jsp";
 	<%}%>
 </script>
