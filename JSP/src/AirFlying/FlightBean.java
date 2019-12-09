@@ -9,6 +9,27 @@ public class FlightBean {
 	private String stdate;
 	private String eddate;
 	private String deptime;
+	private String qlDepDate;
+	private String qlArvDate;
+	private String qlMinimumTime;
+	public String getQlMinimumTime() {
+		return qlMinimumTime;
+	}
+	public void setQlMinimumTime(String qlMinimumTime) {
+		this.qlMinimumTime = qlMinimumTime;
+	}
+	public String getQlArvDate() {
+		return qlArvDate;
+	}
+	public String getQlDepDate() {
+		return qlDepDate;
+	}
+	public void setQlDepDate(String qlDepDate) {
+		this.qlDepDate = qlDepDate;
+	}
+	public void setQlArvDate(String qlArvDate) {
+		this.qlArvDate = qlArvDate;
+	}
 	public String getId() {
 		return id;
 	}

@@ -25,7 +25,7 @@ public class SearchMgr {
         int depday = getDateDay(searchPara.getDepartureDate(), "yyyy-MM-dd"); //날짜 숫자변환 일요일 0 ~ 6 토요일
         String chweek = null;
         String io = "out";
-        String tmp = "select kname, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun"
+        String tmp = "select id, kname, airline, airport, city, flight_num, stdate, eddate, time, mon, tue, wed, thu, fri, sat, sun"
         		+ " from flight, airport_info"
         		+ " where airport = ? and city = ? and time > ? and stdate < ? and eddate > ? and iotype = ?";
         
@@ -71,7 +71,7 @@ public class SearchMgr {
 	            
 	            while (rs.next()) {
 	                FlightBean listBean = new FlightBean();
-	                listBean.setId(rs.getString("kname"));
+	                listBean.setId(rs.getString("id"));
 	                listBean.setAirline(rs.getString("airline"));
 	                listBean.setAirport(rs.getString("airport"));
 	                listBean.setArrvCity(rs.getString("city"));
@@ -86,6 +86,8 @@ public class SearchMgr {
 	                listBean.setFri(rs.getString("fri"));
 	                listBean.setSat(rs.getString("sat"));
 	                listBean.setSun(rs.getString("sun"));
+	                listBean.setQlDepDate(searchPara.departureDate);
+	                listBean.setQlMinimumTime(searchPara.minimumTime);
 	                vecList.add(listBean);
 	            }
             }

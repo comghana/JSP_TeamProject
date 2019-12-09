@@ -26,4 +26,4 @@
     vc.add(listBean); */
 	request.setAttribute("flightListResult", vc);
 %>
-<jsp:forward page = "Search_Index.jsp"/>;
+<jsp:forward page = "Search_Index.jsp"/>

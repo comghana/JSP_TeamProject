@@ -1,3 +1,4 @@
+<%@page import="javax.crypto.AEADBadTagException"%>
 <%@page import="java.util.Vector"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -71,15 +72,55 @@ body {
 }
 </style>
 <body>
+<%
+Vector <FlightBean> vc = new Vector<FlightBean>();
+vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 경고.
+%>
 	<div id="webView">
 		<header>
-			<jsp:include page="Search_Top.jsp" flush="false" />
+		<div
+	style="position: absolute; width: 1197px; height: 86px; background-color: #042759; margin-top: 15px;">
+	<table style="undefined;table-layout: fixed; width: 1116px">
+<colgroup>
+<col style="width: 51px">
+<col style="width: 52px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 52px">
+<col style="width: 52px">
+<col style="width: 52px">
+<col style="width: 52px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 51px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 50px">
+<col style="width: 70px">
+<col style="width: 80px">
+</colgroup>
+  <tr>
+    <th rowspan="2" style="padding-top:11px;"><img src="../img/zoom.PNG" width="120%"></th>
+    <th colspan="5" style="color: white; font-size: 13px; font-weight: bold;padding-left:25px;padding-top:13px;"><%=vc.get(0).getAirport()%> - <%=vc.get(0).getArrvCity()%></th>
+    <th colspan="9"></th>
+    <th colspan="3" rowspan="2" style="color: white; font-size: 13px; font-weight: bold;padding-top:10px;padding-right:20px;"><%=vc.get(0).getQlDepDate()%></th>
+    <th rowspan="2" style="color: white; font-size: 15px;padding-top:10px;">&nbsp&nbsp&nbsp&nbsp  ></th>
+    <th colspan="3" rowspan="2" style="color: white; font-size: 13px; font-weight: bold;padding-top:10px;">0000-00-00</th>
+  </tr>
+  <tr>
+    <td colspan="3" style="color: white; font-size: 13px; font-weight: bold;padding-left:25px;padding-bottom:7px;"></td>
+    <td colspan="9"></td>
+  </tr>
+</table>
+
+</div>
 		</header>
-		<div style="overflow:auto; margin-top: 100px; height: 500px">
+		<div style="overflow:auto; margin-top: 150px; height: 500px">
 		<%
-		Vector <FlightBean> vc = new Vector<FlightBean>();
-		vc = (Vector) request.getAttribute("flightListResult"); //위험 타입변환 경고.
-		
 		for(int i = 0; i < vc.size(); i++) { //임시 테스트  => int 형의 숫자 넣기.
 			String depTime = vc.get(i).getDeptime();
 		%>
@@ -95,25 +136,26 @@ body {
 					</tr>
 					<tr>
 						<td class="d_time" align="center">
-						<%= depTime.substring(0,2) %>:<%= depTime.substring(2) %>
+						<%= depTime.substring(0,2) +":"+ depTime.substring(2) %>
 						</td>
-						<td class="point"><img src="../img/line.png" alt="" width=>
+						<td class="point"><img src="../img/line.png" alt="">
 							<img src="../img/plane.png" alt="" width=25px></td>
 						<td class="a_time" align="center">00:00</td>
 						<th class="trash"><img src="../img/heart.PNG" alt="" width=70px></th>
 					</tr>
 					<tr>
-						<td class="d_city" align="center"
-							style="font-weight: bold; padding-bottom: 25px;"><%= vc.get(i).getAirport() %></td>
+						<td class="d_city" align="center"style="font-weight:bold; padding-bottom:25px;">
+							<%= vc.get(i).getAirport()%>
+							</td>
 						<td class="how" align="center"
 							style="color: #00A698; font-weight: bold; padding-right: 20px;">직항</td>
 						<td class="a_city" align="center"
-							style="font-weight: bold; padding-bottom: 25px;"><%= vc.get(i).getArrvCity() %></td>
+							style="font-weight: bold; padding-bottom: 25px;"><%= vc.get(i).getArrvCity()%></td>
 						<th class="empty"></th>
 					</tr>
 				</table>
-
 <%}%>
 </div>
 </body>
+
 </html>
