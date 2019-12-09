@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `recommend`
+-- Table structure for table `city`
 --
 
-DROP TABLE IF EXISTS `recommend`;
+DROP TABLE IF EXISTS `city`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `recommend` (
-  `city_name` varchar(20) NOT NULL,
-  `file_name` varchar(20) DEFAULT NULL,
-  `status` char(3) DEFAULT 'out',
-  PRIMARY KEY (`city_name`)
+CREATE TABLE `city` (
+  `name` varchar(20) NOT NULL,
+  `file` varchar(20) DEFAULT NULL,
+  `io` char(3) DEFAULT 'out',
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `recommend`
+-- Dumping data for table `city`
 --
 
-LOCK TABLES `recommend` WRITE;
-/*!40000 ALTER TABLE `recommend` DISABLE KEYS */;
-INSERT INTO `recommend` VALUES ('뉴욕','newyork.jpg','in'),('다낭','danang.jpg','in'),('로스앤젤레스','la.jpg','out'),('바티칸','vatikan.jpg','out'),('베니스','venis.jpg','out'),('북경','bookkeong.jpg','out'),('상하이','sanghae.jpg','out'),('시카고','sikago.jpg','out'),('코타키나발루','kota.jpg','in');
-/*!40000 ALTER TABLE `recommend` ENABLE KEYS */;
+LOCK TABLES `city` WRITE;
+/*!40000 ALTER TABLE `city` DISABLE KEYS */;
+INSERT INTO `city` VALUES ('Bei Jing','bookkeong.jpg','out'),('Chicago','sikago.jpg','out'),('Da Nang','danang.jpg','in'),('Los Angeles','la.jpg','out'),('New York','newyork.jpg','in'),('Shang Hai','sanghae.jpg','out'),('Vaticanae','vatikan.jpg','out'),('Venice','venis.jpg','out');
+/*!40000 ALTER TABLE `city` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-08 13:52:49
+-- Dump completed on 2019-12-09 11:35:18

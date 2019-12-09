@@ -72,16 +72,19 @@ create table domesticFlight (
     primary key(d_id)
 );
 
+select * from domesticflight;
 alter table domesticflight modify column d_flightnum varchar(15) not null  after iotype;
-alter table domesticflight modify column d_sttime int not null after d_eddate;
-alter table domesticflight modify column d_edtime int not null after d_sttime;
+alter table domesticflight modify column d_sttime char(4) not null after d_eddate;
+alter table domesticflight modify column d_edtime char(4) not null after d_sttime;
 alter table domesticflight modify column d_id int not null;
 alter table domesticflight drop column d_id;
 alter table domesticflight add column I_D char(1) not null default 'D';
 
+select * from internationalflight;
 alter table internationalflight modify column id int not null;
 alter table internationalflight drop column id;
 alter table internationalflight add column I_D char(1) not null default 'I';
+
 
 
 select * from admin;
@@ -173,16 +176,20 @@ select count(*) from internationalflight;
 drop table domesticflight;
 rename table internationalflight to flight;
 select * from flight;
+select count(*) from flight;
 
 
 select left(stdate, 10) from flight;
-alter table flight add column stdate1 varchar(30) after flight_num;
-alter table flight modify column airline varchar(20) not null;
-alter table flight modify column airport varchar(30) not null;
-select count(stdate) from flight;
 
+desc flight;
+alter table flight add column id int primary key AUTO_INCREMENT first;
+ALTER TABLE flight ADD constraint FK
+FOREIGN KEY(airport) 
+references AIRPORT_INFO(KNAME);
 
-insert into flight(stdate1) select left(stdate, 10) from flight;
+ALTER TABLE flight ADD constraint FK2
+FOREIGN KEY(city) 
+references AIRPORT_INFO(KNAME);
 
 create table wish_list (
 	mem_id varchar(30) not null,
