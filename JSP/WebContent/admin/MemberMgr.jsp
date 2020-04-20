@@ -23,7 +23,7 @@
   </head>
   <body>
     <br><br>
-  <%@ include file="Top.jsp" %>
+ <%@ include file="Top.jsp" %> 
   <br><br>
   <%Vector vResult= memMgr.getMemberList();%>
   <div style="width:94%;text-align:center;">
